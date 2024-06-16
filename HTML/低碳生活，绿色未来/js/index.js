@@ -148,3 +148,15 @@ function toggleMenu(e) {
 document.querySelector("#faq").addEventListener("click", function (e) {
     toggleMenu(e);
 });
+// 导航栏切换
+window.onscroll = function() {
+    var navbar = document.getElementById("nav");
+    if (window.pageYOffset >= 100) {
+        navbar.classList.add("sticky");
+        document.getElementById("nav").style.position = "fixed";
+    } if (window.pageYOffset < 1) {
+        document.getElementById("nav").style.color = "none";
+        document.getElementById("nav").style.position = "absolute";
+        setTimeout(function() {navbar.classList.remove("sticky");}, 100);
+    }
+}
