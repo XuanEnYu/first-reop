@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>前端在线</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- 加载动画 -->
+    <div class="loader">
+        <i class="fa-solid fa-spinner fa-spin"></i>
+    </div>
+    <!-- 滚动 -->
+    <div class="container">
+
+        <!-- 头部 -->
+        <header class="slides bg-img1">
+            <!-- 导航栏 -->
+            <nav id="navbar">
+                <a class="logo" href="index.html"><i class="fa-solid fa-mug-saucer fa-beat "
+                        style="margin-right: 15px;"></i>前端在线</a>
+                <ul>
+                    <li><a href="./index.html" class="current"><i class="fa-solid fa-house"></i>首页</a></li>
+                    <li><a href="./about.html"><i class="fa-solid fa-address-card"></i>关于我们</a></li>
+                    <li><a href="./contact.html"><i class="fa-solid fa-envelope"></i>联系我们</a></li>
+                </ul>
+            </nav>
+            <!-- 轮播图 -->
+            <div class="banner">
+                <h1>欢迎来到<span class="text-primary">前端在线<i class="fa-solid fa-mug-saucer fa-beat "
+                            style="margin-left: 15px;"></i></span></h1>
+                <span class="text-primary" style="font-size: 30px; margin-top: 50px; line-height: 50px;">什么是前端？</span>
+                <p>前端，通常指的是网站的前台页面，也就是用户可以直接与之交互的部分。前端开发者使用HTML、CSS、JavaScript、jQuery等技术来构建网站的前端部分，包括网站的结构、布局、内容、交互等。前端开发者需要掌握HTML、CSS、JavaScript、jQuery等技术，并熟练使用前端框架、库、工具，如Bootstrap、React、Vue等。
+                </p>
+                </p>
+                <a href="#about2" class="btn" onclick="load()"><i class="fa-solid fa-circle-info"></i>了解更多</a>
+            </div>
+        </header>
+        <!-- 内容 -->
+        <section class="about slides">
+            <div class="about-right">
+                <h2><span class="text-primary"><i class="fa-solid fa-mug-saucer fa-beat "
+                            style="margin-right: 15px;"></i>前端在线</span>介绍</h2>
+                <p>前端在线是一个专注于前端技术分享的平台，我们将分享一些前端开发相关的技术文章、工具、资源以及一些有趣的项目。欢迎大家关注我们的分享，共同进步！</p>
+            </div>
+            <div class="about-btn-box">
+                <button class="carousel-control-prev" aria-label="Previous slide">
+                    <i class="fa-solid fa-circle-chevron-up"></i>
+                </button>
+                <button class="carousel-control-next" aria-label="Next slide">
+                    <i class="fa-solid fa-circle-chevron-down"></i>
+                </button>
+            </div>
+            <div class="about-left">
+                <div class="carousel">
+                    <div class="carousel-inner">
+                        <!-- 轮播项 -->
+                        <div class="carousel-item">
+                            <div class="about-item">
+                                <h2 class="text-primary">前端技术分享<i class="fa-solid fa-share"></i></h2>
+                                <p>分享一些前端开发相关的技术文章、工具、资源以及一些有趣的项目。欢迎大家关注我们的分享，共同进步！</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="about-item">
+                                <h2 class="text-primary">前端工具推荐<i class="fa-solid fa-share-nodes"></i></h2>
+                                <p>分享一些前端开发相关的技术文章、工具、资源以及一些有趣的项目。欢迎大家关注我们的分享，共同进步！</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="about-item">
+                                <h2 class="text-primary">前端资源分享<i class="fa-solid fa-retweet"></i></h2>
+                                <p>分享一些前端开发相关的技术文章、工具、资源以及一些有趣的项目。欢迎大家关注我们的分享，共同进步！</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="about2 slides" id="about2">
+            <div class="about2-left">
+                <img src="./image/html.jfif">
+                <h1 class="text-primary"><i class="fa-solid fa-desktop"></i>网站前端</h1>
+                <p>前端技术一般分为前端设计和前端开发，前端设计一般可以理解为网站的视觉设计，
+                    前端开发则是网站的前台代码实现，包括基本的HTML和CSS以及JavaScript/ajax，
+                    最新的高级版本HTML5、CSS3，以及SVG等。
+                </p>
+            </div>
+            <div class="about2-right">
+                <h1 class="text-primary"><i class="fa-solid fa-code-branch"></i>核心技术</h1>
+                <p>这三个是前端开发中最基本也是最必须的三个技能。前端的开发中，在页面的布局时，
+                    HTML将元素进行定义，CSS对展示的元素进行定位，再通过JavaScript实现相应的效果和交互。
+                    虽然表面看起来很简单，但这里面需要掌握的东西绝对不会少。在进行开发前，需要对这些概念弄清楚、
+                    弄明白，这样在开发的过程中才会得心应手。
+                </p>
+
+                <div class="about2-right-item">
+
+                    <h2 class="text-primary"><i class="fa-brands fa-html5"></i>HTML</h2>
+                    <p>
+                        HTML (Hypertext Markup Language) 超文本标记语言，它是一种用于创建网页的标记语言。
+                        HTML 文档结构由标签和元素组成，标签用于定义元素的属性，元素则是网页的基本构成单位。
+                        HTML 文档可以嵌入各种外部文件，如图片、视频、音频等。HTML5 则是 HTML 的最新版本，
+                        它新增了许多特性，如语义化标签、音视频、地理位置、拖放、Web 存储、Web 应用等。
+                    </p>
+                </div>
+                <div class="about2-right-item">
+
+                    <h2 class="text-primary"><i class="fa-brands fa-css3-alt"></i>CSS</h2>
+                    <p>
+                        CSS (Cascading Style Sheets) 层叠样式表，它是一种用来表现 HTML 或 XML 文档样式的计算机语言。
+                        CSS 用来控制网页的布局、配色、字体、边框、动画、多媒体等。CSS3 则是 CSS 的最新版本，
+                        它新增了许多特性，如圆角、边框阴影、渐变、多列布局、网格布局、文本效果、过渡效果、变换效果等。
+                    </p>
+                </div>
+                <div class="about2-right-item">
+
+                    <h2 class="text-primary"><i class="fa-brands fa-js"></i>JavaScript</h2>
+                    <p>
+                        avaScript 是一种动态的脚本语言，它可以实现网页的各种动态功能。它可以控制网页的各种元素，
+                        包括HTML、CSS、DOM、BOM等，还可以实现动画、音频、视频、地图、图表、轮播图、表单验证等功能。
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+        <!-- 底部 -->
+        <footer class="slides">
+            <canvas id="Meteor"></canvas>
+            <!-- 底部盒子 -->
+            <div class="fotter-box">
+                <h1><i class="fa-solid fa-mug-saucer fa-beat " style="margin-right: 15px;"></i>前端在线</h1>
+                <div class="fotter-animation" style="--t:30s">
+                    <div>
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JAVASCRIPT</span>
+                        <span>PHP</span>
+                        <span>JAVA</span>
+                        <span>VUE</span>
+                        <span>HREEJS</span>
+                    </div>
+                    <div>
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JAVASCRIPT</span>
+                        <span>PHP</span>
+                        <span>JAVA</span>
+                        <span>VUE</span>
+                        <span>HREEJS</span>
+                    </div>
+                </div>
+                <a href="./about.html"><i class="fa-solid fa-circle-info"></i>关于我们</a>
+            </div>
+            <!-- 底部导航 -->
+            <div class="fotter-nav">
+                <p>&copy; 2024 前端在线. All rights reserved.</p>
+                <ul>
+                    <li><a href="#"><i class="fa-brands fa-tiktok"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-github"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-discord"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa-solid fa-envelope"></i></a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+    <script src="./js/rain.js"></script>
+    <script src="./js/load.js"></script>
+    <script src="./js/banner.js"></script>
+</body>
+
+</html>

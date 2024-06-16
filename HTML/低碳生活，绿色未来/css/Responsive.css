@@ -1,0 +1,81 @@
+@media screen and (max-width: 1010px) {
+    header #nav {
+        padding: 10px;
+        padding-right: 30px;
+    }
+
+    header #nav .menu {
+        display: none;
+    }
+
+    header #nav .menu-mobile {
+        display: flex;
+        font-size: 32px;
+    }
+
+    header #nav .logo {
+        justify-content: flex-start;
+        margin-left: 10px;
+    }
+}
+
+@media screen and (max-width: 1520px) {
+    #banner .rightbanner {
+        position: relative;
+        z-index: -1;
+    }
+
+    #banner .leftbanner {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 70%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        padding: 0;
+    }
+
+    #banner .leftbanner h1,
+    #banner .leftbanner p {
+        color: #fff;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #about .about-box {
+        max-width: 1140px;
+    }
+}
+@media screen and (max-width: 775px) {
+    #about .about-box .item {
+        flex: 1 1 40%;
+    }
+}
+
+@media screen and (max-width: 1315px) {
+    #scheme .scheme-box .item {
+        width: 45%;
+        padding: 40px;
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 1025px) {
+    #scheme .scheme-box .item {
+        flex: 1 1 50%;
+        height: auto;
+    }
+
+    #scheme .scheme-box {
+        padding: 30px;
+    }
+}
+@media screen and (max-width: 1150px) {
+    #footprint .footprint-box{
+        padding: 50px;
+        flex-direction: column;
+    }
+    #footprint .footprint-leftbox{
+        display: none;
+    }
+}

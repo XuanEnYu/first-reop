@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>低碳生活，绿色未来</title>
+    <link rel="icon" href="./image/logo.png" type="image/logo.png">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/Responsive.css">
+    <link rel="stylesheet" href="./css/animation.css">
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- 弹窗 -->
+    <div class="Pop-ups">
+        <p id="popupsContent" style="display: none;">登录成功！3秒后自动跳转！</p>
+        <p id="popupsContent1" style="display: none;">登录失败！请检查用户名或密码！</p>
+        <p id="popupsContent2" style="display: none;">错误！请登录！</p>
+    </div>
+    <!-- 加载动画 -->
+    <div class="loader">
+        <i class="fa-solid fa-spinner fa-spin"></i>
+    </div>
+    <!-- 模态框 -->
+    <div id="Modal" onclick="clickBackground()">
+        <div class="Modal-box" id="Modal-box">
+            <div class="Modal-box-top">
+                <a onclick="closeModal()"><i class="fa-solid fa-x"></i></a>
+            </div>
+            <ul class="menu">
+                <li><a href="#" onclick="load()"><i class="fa-solid fa-house"></i>首页</a></li>
+                <li><a href="#about" onclick="load()"><i class="fa-solid fa-address-card"></i>关于我们</a></li>
+                <li><a href="#scheme" onclick="load()"><i class="fa-solid fa-scale-balanced"></i>减排方案</a></li>
+                <li><a href="#footprint" onclick="load()"><i class="fa-solid fa-database"></i>碳足迹</a></li>
+                <li><a href="#footprint" onclick="load()"><i class="fa-solid fa-circle-question"></i>帮助</a></li>
+                <li><a><i class="fa-solid fa-user"></i>登录</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- 登录模态框 -->
+    <div id="loginModal">
+        <div class="login-box" id="closeloginModal">
+            <div class="login-box-top">
+                <a onclick="closeLoginModal()"><i class="fa-solid fa-x"></i></a>
+            </div>
+            <h1>Login</h1>
+            <form action="">
+                <div class="input-box">
+                    <label for="username"><i class="fa-solid fa-user"></i>用户名</label>
+                    <input type="text" id="username" name="username" required>
+                    <label for="password"><i class="fa-solid fa-lock"></i>密码</label>
+                    <input type="password" id="password" name="password" required>
+                    <div class="reg">
+                        <a onclick="openRegModal()"><i class="fa-solid fa-registered"></i>注册</a>
+                        <a href="#"><i class="fa-solid fa-key"></i>忘记密码?</a>
+                    </div>
+                    <input type="button" value="登录" id="login_btn">
+                </div>
+            </form>
+            <div class="login-box-bottom">
+                <a href="#"><i class="fa-brands fa-weixin"></i></a>
+                <a href="#"><i class="fa-brands fa-qq"></i></a>
+                <a href="#"><i class="fa-brands fa-apple"></i></a>
+                <a href="#"><i class="fa-brands fa-google"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
+        </div>
+        <!-- 注册模态框 -->
+        <div class="login-box reg-box" id="regModal">
+            <div class="login-box-top">
+                <a onclick="closeLoginModal()"><i class="fa-solid fa-x"></i></a>
+            </div>
+            <h1>Register</h1>
+            <form action="">
+                <div class="input-box">
+                    <label for="username"><i class="fa-solid fa-user"></i>用户名</label>
+                    <input type="text" id="username" name="username" required>
+                    <label for="password"><i class="fa-solid fa-lock"></i>密码</label>
+                    <input type="password" id="password" name="password" required>
+                    <label for="email"><i class="fa-solid fa-envelope"></i>邮箱</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="captcha"><i class="fa-solid fa-image"></i>验证码</label>
+                    <input type="text" id="captcha" name="captcha" required>
+                    <div class="reg">
+                        <a onclick="openLoginModal2()"><i class="fa-solid fa-registered"></i>登录</a>
+                        <a href="#"><i class="fa-solid fa-key"></i>获取验证码</a>
+                    </div>
+                    <input type="button" value="注册" id="login_btn">
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- 头部 -->
+    <header>
+        <!-- 导航栏 -->
+        <div id="nav">
+            <div class="logo"><img src="./image/logo.png" alt="logo">
+                <h1>碳足迹</h1>
+            </div>
+            <ul class="menu">
+                <li><a href="#" onclick="load()"><i class="fa-solid fa-house"></i>首页</a></li>
+                <li><a href="#about" onclick="load()"><i class="fa-solid fa-address-card"></i>关于我们</a></li>
+                <li><a href="#scheme" onclick="load()"><i class="fa-solid fa-scale-balanced"></i>减排方案</a></li>
+                <li><a href="#footprint" onclick="load()"><i class="fa-solid fa-database"></i>碳足迹</a></li>
+                <li><a href="#footprint" onclick="load()"><i class="fa-solid fa-circle-question"></i>帮助</a></li>
+                <li><a onclick="openLoginModal()"><i class="fa-solid fa-user"></i>登录</a></li>
+            </ul>
+            <div class="menu-mobile">
+                <a onclick="openModal()"><i class="fa-solid fa-bars"></i></a>
+            </div>
+        </div>
+        <!-- 标题 -->
+        <div id="banner">
+            <div class="leftbanner">
+                <h1>低碳生活，绿色未来</h1>
+                <p id="trigger">碳足迹计算器，为您提供全面、科学的碳排放数据，帮助您更好地减少碳排放，实现绿色未来。</p>
+            </div>
+            <div class="rightbanner">
+                <img src="./image/tree-2027899_1920.png">
+            </div>
+        </div>
+    </header>
+    <!-- 关于我们 -->
+    <div id="about">
+        <h1>关于碳足迹</h1>
+        <p>我们的产品优势</p>
+        <div class="about-box" id="about-animation">
+            <div class="item">
+                <span></span>
+                <h2><i class="fa-solid fa-leaf"></i>绿色生活</h2>
+                <p>绿色生活，是指以人为本，绿色环保的生活方式。低碳生活，则是指以人为本，减少碳排放的生活方式。</p>
+            </div>
+            <div class="item">
+                <span></span>
+                <h2><i class="fa-solid fa-leaf"></i>绿色生活</h2>
+                <p>绿色生活，是指以人为本，绿色环保的生活方式。低碳生活，则是指以人为本，减少碳排放的生活方式。</p>
+            </div>
+            <div class="item">
+                <span></span>
+                <h2><i class="fa-solid fa-leaf"></i>绿色生活</h2>
+                <p>绿色生活，是指以人为本，绿色环保的生活方式。低碳生活，则是指以人为本，减少碳排放的生活方式。</p>
+            </div>
+            <div class="item">
+                <span></span>
+                <h2><i class="fa-solid fa-leaf"></i>绿色生活</h2>
+                <p>绿色生活，是指以人为本，绿色环保的生活方式。低碳生活，则是指以人为本，减少碳排放的生活方式。</p>
+            </div>
+            <div class="item">
+                <span></span>
+                <h2><i class="fa-solid fa-leaf"></i>绿色生活</h2>
+                <p>绿色生活，是指以人为本，绿色环保的生活方式。低碳生活，则是指以人为本，减少碳排放的生活方式。</p>
+            </div>
+            <div class="item">
+                <span></span>
+                <h2><i class="fa-solid fa-leaf"></i>绿色生活</h2>
+                <p>绿色生活，是指以人为本，绿色环保的生活方式。低碳生活，则是指以人为本，减少碳排放的生活方式。</p>
+            </div>
+        </div>
+    </div>
+    <!-- 减排方案 -->
+    <div id="scheme">
+        <h1>减排方案</h1>
+        <p>为您提供全面、科学的碳排放数据，帮助您更好地减少碳排放，实现绿色未来。</p>
+        <div class="scheme-box">
+            <div class="item">
+                <h2><i class="fa-solid fa-battery-full fa-rotate-270"></i>节约能源</h2>
+                <p>减少能源使用是个人减排的有效途径。关闭不必要的灯光和电器，选择节能型家电，调低暖气和空调的温度，合理利用自然光等，都能有效降低能源消耗。</p>
+                <a href="#">查看详情</a>
+            </div>
+            <div class="item">
+                <h2><i class="fa-solid fa-charging-station"></i>选择可再生能源</h2>
+                <p>如果条件允许，考虑安装太阳能板或风力发电机，以减少对化石燃料的依赖，从而降低碳排放。</p>
+                <a href="#">查看详情</a>
+            </div>
+            <div class="item">
+                <h2><i class="fa-solid fa-person-biking"></i>改变出行方式</h2>
+                <p>选择步行、骑行、乘坐公共交通工具或共享交通工具，尽量减少个人驾车，特别是选择电动车或混合动力车</p>
+                <a href="#">查看详情</a>
+            </div>
+            <div class="item">
+                <h2><i class="fa-solid fa-utensils"></i>饮食选择</h2>
+                <p>减少肉类消耗，特别是牛肉和羊肉，因为畜牧业是温室气体的主要排放源之一。增加蔬菜、水果和全谷类的摄入，有助于减少碳足迹。</p>
+                <a href="#">查看详情</a>
+            </div>
+            <div class="item">
+                <h2><i class="fa-solid fa-trash-can"></i>减少废物产生</h2>
+                <p>减少使用一次性物品，尽量选择可回收的材料，并且合理回收废物。购买耐用品和二手商品，减少资源浪费。</p>
+                <a href="#">查看详情</a>
+            </div>
+            <div class="item">
+                <h2><i class="fa-solid fa-faucet-drip"></i>水资源管理</h2>
+                <p>减少用水量，修复漏水管道，选择节水型家电和设备，都有助于减少碳排放。</p>
+                <a href="#">查看详情</a>
+            </div>
+            <div class="item">
+                <h2><i class="fa-solid fa-leaf"></i>推广绿色消费</h2>
+                <p>选择环保产品，如使用无塑料包装的商品、购买本地生产的食物等，都可以减少碳排放。</p>
+                <a href="#">查看详情</a>
+            </div>
+            <div class="item">
+                <h2><i class="fa-solid fa-person-chalkboard"></i>教育宣传</h2>
+                <p>通过分享自己的减排经验，参与社区活动，鼓励他人也加入减排行动，扩大减排的影响力。</p>
+                <a href="#">查看详情</a>
+            </div>
+        </div>
+    </div>
+    <!-- 碳足迹 -->
+    <div id="footprint">
+        <div class="footprint-box">
+            <div class="footprint-leftbox">
+                <img src="./image/tree-157109_1920.png">
+            </div>
+            <div class="footprint-rightbox">
+                <div class="footprint-rightbox-top">
+                    <h1>碳足迹</h1>
+                    <p>为您提供全面、科学的碳排放数据，帮助您更好地减少碳排放，实现绿色未来。</p>
+                    <a onclick="showPopups2()" class="unselectable">立即计算</a>
+                </div>
+                <!-- 帮助 -->
+                <div class="footprint-rightbox-bottom">
+                    <h1>大家的问题</h1>
+                    <ul id="faq" class="unselectable">
+                        <li><a>关于我们的网站<i class="fa-solid fa-plus plus"></i></a>
+                            <div class="faq" style="opacity: 0; height: 0; display: none;">
+                                <p>文字文字文字</p>
+                            </div>
+                        </li>
+                        <li><a>网站要收费吗？<i class="fa-solid fa-plus"></i></a>
+                            <div class="faq" style="opacity: 0; height: 0; display: none;">
+                                <p>文字文字文字</p>
+                            </div>
+                        </li>
+                        <li><a>该网站是做什么的？<i class="fa-solid fa-plus"></i></a>
+                            <div class="faq" style="opacity: 0; height: 0; display: none;">
+                                <p>文字文字文字</p>
+                            </div>
+                        </li>
+                        <li><a>如何联系我们？<i class="fa-solid fa-plus"></i></a>
+                            <div class="faq" style="opacity: 0; height: 0; display: none;">
+                                <p>文字文字文字</p>
+                            </div>
+                        </li>
+                        <li><a>如何注册账号?<i class="fa-solid fa-plus"></i></a>
+                            <div class="faq" style="opacity: 0; height: 0; display: none;">
+                                <p>文字文字文字</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 底部 -->
+    <footer id="footer">
+        <p>Copyright © 2022 碳足迹. All Rights Reserved.</p>
+    </footer>
+    <script src="./js/index.js"></script>
+    <script src="./js/load.js"></script>
+    <script src="./js/popups.js"></script>
+</body>
+
+</html>

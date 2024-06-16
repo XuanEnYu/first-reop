@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>前端在线</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- 加载动画 -->
+    <div class="loader">
+        <i class="fa-solid fa-spinner fa-spin"></i>
+    </div>
+    <!-- 滚动 -->
+    <div class="container">
+
+        <!-- 头部 -->
+        <header class="slides bg-img3">
+            <!-- 导航栏 -->
+            <nav id="navbar">
+                <a class="logo" href="index.html"><i class="fa-solid fa-mug-saucer fa-beat "
+                        style="margin-right: 15px;"></i>前端在线</a>
+                <ul>
+                    <li><a href="./index.html"><i class="fa-solid fa-house"></i>首页</a></li>
+                    <li><a href="./about.html"><i class="fa-solid fa-address-card"></i>关于我们</a></li>
+                    <li><a href="./contact.html" class="current"><i class="fa-solid fa-envelope"></i>联系我们</a></li>
+                </ul>
+            </nav>
+            <!-- 内容 -->
+            <form class="Contact" action="" method="get">
+                <h1 class="text-primary">联系我们</h1>
+                <p>如果您有任何疑问或建议，请通过以下方式联系我们：</p>
+                <label class="text-primary" for="name">姓名</label>
+                <input text="text" id="name" required>
+                <label class="text-primary" for="email">邮箱</label>
+                <input text="text" id="email" required>
+                <label class="text-primary" for="message">留言</label>
+                <textarea cols="30" rows="10" id="message" required></textarea>
+                <button type="submit"><i class="fa-solid fa-arrow-up-from-bracket"></i>提交</button>
+            </form>
+        </header>
+        <!-- 底部 -->
+        <footer class="slides">
+            <canvas id="Meteor"></canvas>
+            <!-- 底部盒子 -->
+            <div class="fotter-box">
+                <h1><i class="fa-solid fa-mug-saucer fa-beat " style="margin-right: 15px;"></i>前端在线</h1>
+                <div class="fotter-animation" style="--t:30s">
+                    <div>
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JAVASCRIPT</span>
+                        <span>PHP</span>
+                        <span>JAVA</span>
+                        <span>VUE</span>
+                        <span>HREEJS</span>
+                    </div>
+                    <div>
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JAVASCRIPT</span>
+                        <span>PHP</span>
+                        <span>JAVA</span>
+                        <span>VUE</span>
+                        <span>HREEJS</span>
+                    </div>
+                </div>
+                <a href="./about.html"><i class="fa-solid fa-circle-info"></i>关于我们</a>
+            </div>
+            <!-- 底部导航 -->
+            <div class="fotter-nav">
+                <p>&copy; 2024 前端在线. All rights reserved.</p>
+                <ul>
+                    <li><a href="#"><i class="fa-brands fa-tiktok"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-github"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-discord"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa-solid fa-envelope"></i></a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+    <script src="./js/rain.js"></script>
+    <script src="./js/load.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>前端在线</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- 加载动画 -->
+    <div class="loader">
+        <i class="fa-solid fa-spinner fa-spin"></i>
+    </div>
+    <!-- 滚动 -->
+    <div class="container">
+
+        <!-- 头部 -->
+        <header class="slides bg-img2">
+            <!-- 导航栏 -->
+            <nav id="navbar">
+                <a class="logo" href="index.html"><i class="fa-solid fa-mug-saucer fa-beat "
+                        style="margin-right: 15px;"></i>前端在线</a>
+                <ul>
+                    <li><a href="./index.html"><i class="fa-solid fa-house"></i>首页</a></li>
+                    <li><a href="./about.html" class="current"><i class="fa-solid fa-address-card"></i>关于我们</a></li>
+                    <li><a href="./contact.html"><i class="fa-solid fa-envelope"></i>联系我们</a></li>
+                </ul>
+            </nav>
+            <!-- 内容 -->
+            <div class="wrapper">
+                <div class="wrapper-container">
+                    <input type="radio" name="slide" id="c1" checked>
+                    <label for="c1" class="card">
+                        <div class="row">
+                            <div class="icon"><i class="fa-solid fa-star"></i></div>
+                            <div class="description">
+                                <h4 class="text-primary"><i class="fa-solid fa-user"></i>关于前端</h4>
+                                <p style="color: black;">前端开发是指利用 HTML、CSS 和 JavaScript 等技术，构建网页或 Web
+                                    应用程序的用户界面部分的过程。这涉及到设计网页的外观和布局，以及实现用户与页面之间的交互功能。</p>
+                            </div>
+                        </div>
+                    </label>
+                    <input type="radio" name="slide" id="c2" checked>
+                    <label for="c2" class="card">
+                        <div class="row">
+                            <div class="icon"><i class="fa-solid fa-star"></i></div>
+                            <div class="description">
+                                <h4 class="text-primary"><i class="fa-solid fa-user"></i>关于HTML</h4>
+                                <p st>
+                                    HTML被用于构建Web页面，它描述了页面的基本结构和语义，并告诉浏览器如何解释和显示页面内容。通过HTML，开发者可以定义页面的标题、段落、列表、表格、图像、链接等元素，从而创建出丰富多样的网页内容。
+                                </p>
+                            </div>
+                        </div>
+                    </label>
+                    <input type="radio" name="slide" id="c3" checked>
+                    <label for="c3" class="card">
+                        <div class="row">
+                            <div class="icon"><i class="fa-solid fa-star"></i></div>
+                            <div class="description">
+                                <h4 class="text-primary"><i class="fa-solid fa-user"></i>关于CSS</h4>
+                                <p>通过CSS，开发者可以定义网页元素的外观、大小、颜色、间距等各种样式属性，使得网页具有吸引力、易读性和一致性。CSS样式可以直接写入HTML文档的style标签内，也可以单独存放在外部CSS文件中，然后通过链接引入HTML文档中。
+                                </p>
+                            </div>
+                        </div>
+                    </label>
+                    <input type="radio" name="slide" id="c4" checked>
+                    <label for="c4" class="card">
+                        <div class="row">
+                            <div class="icon"><i class="fa-solid fa-star"></i></div>
+                            <div class="description">
+                                <h4 class="text-primary"><i class="fa-solid fa-user"></i>关于JavaScript</h4>
+                                <p>JavaScript是一种广泛用于Web开发的高级编程语言，它主要用于实现网页的交互功能和动态效果。JavaScript能够在网页上运行，并与HTML和CSS协同工作，使得网页具有更丰富的用户交互体验。
+                                </p>
+                            </div>
+                        </div>
+                    </label>
+                    <input type="radio" name="slide" id="c5" checked>
+                    <label for="c5" class="card">
+                        <div class="row">
+                            <div class="icon"><i class="fa-solid fa-star"></i></div>
+                            <div class="description">
+                                <h4 class="text-primary"><i class="fa-solid fa-user"></i>关于我们</h4>
+                                <p>前端在线是一个致力于推广前端技术的平台，我们提供前端技术学习、分享、交流、培训等服务，希望通过我们的努力，帮助更多的人了解前端技术，提升自我能力。</p>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+            </div>
+        </header>
+        <!-- 底部 -->
+        <footer class="slides">
+            <canvas id="Meteor"></canvas>
+            <!-- 底部盒子 -->
+            <div class="fotter-box">
+                <h1><i class="fa-solid fa-mug-saucer fa-beat " style="margin-right: 15px;"></i>前端在线</h1>
+                <div class="fotter-animation" style="--t:30s">
+                    <div>
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JAVASCRIPT</span>
+                        <span>PHP</span>
+                        <span>JAVA</span>
+                        <span>VUE</span>
+                        <span>HREEJS</span>
+                    </div>
+                    <div>
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JAVASCRIPT</span>
+                        <span>PHP</span>
+                        <span>JAVA</span>
+                        <span>VUE</span>
+                        <span>HREEJS</span>
+                    </div>
+                </div>
+                <a href="./about.html"><i class="fa-solid fa-circle-info"></i>关于我们</a>
+            </div>
+            <!-- 底部导航 -->
+            <div class="fotter-nav">
+                <p>&copy; 2024 前端在线. All rights reserved.</p>
+                <ul>
+                    <li><a href="#"><i class="fa-brands fa-tiktok"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-github"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-discord"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa-solid fa-envelope"></i></a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+    <script src="./js/rain.js"></script>
+    <script src="./js/load.js"></script>
+</body>
+
+</html>

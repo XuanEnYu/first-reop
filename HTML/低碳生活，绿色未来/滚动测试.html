@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>滚动到指定位置播放动画</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 200vh;
+
+        }
+        #animatedElement {
+            opacity: 0;
+            transition: all 1s ease 0.3s;
+            background: yellow;
+            position: relative;
+            height: 50vh;
+            top: 75vh;
+            /* 距离页面底部100vh */
+        }
+
+        #trigger {
+            height: 50px;
+            position: absolute;
+            top: 30vh;
+            background: brown;
+            text-align: center;
+            line-height: 50px;
+            width: 100%;
+        }
+
+        @keyframes about-in {
+            0% {
+                opacity: 0;
+                transform: translateY(100px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="trigger">滚动到这个元素下面来触发动画</div>
+    <div id="animatedElement">动画元素</div>
+
+    <script>
+        // 获取动画元素和触发元素
+        var animatedElement = document.getElementById('animatedElement');
+        var trigger = document.getElementById('trigger');
+
+        // 设置触发动画的阈值，即滚动到触发元素顶部距离视口顶部的距离
+        var triggerOffset = trigger.getBoundingClientRect().top;
+
+        window.addEventListener('scroll', function () {
+            // 当滚动到触发元素时，播放动画
+            if (window.pageYOffset >= triggerOffset) {
+                animatedElement.style.animation = "about-in 1s ease 0.3s forwards";
+            }
+        });
+    </script>
+
+</body>
+
+</html>

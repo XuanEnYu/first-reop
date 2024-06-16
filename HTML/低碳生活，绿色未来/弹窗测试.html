@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>弹窗测试</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            background: #333;
+            overflow: hidden;
+        }
+
+        .pop-ups {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            width: 150px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            background: chocolate;
+            color: #fff;
+            border-radius: 10px;
+            z-index: 9998;
+            margin-right: 25px;
+            transition: all.3 ease;
+            animation: show 6s ease forwards;
+        }
+        @keyframes show {
+            0% {
+                transform: translateX(200%);
+            }
+            10% {
+                transform: translateX(0);
+            }
+            75% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(300%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="showPopups()">弹窗测试</button>
+    <div class="Pop-ups">
+
+    </div>
+    <p id="popupsContent" style="display:none;">弹窗123</p>
+    <script>
+        function showPopups() {
+            let html = document.getElementById('popupsContent').innerHTML; // 获取弹窗内容
+            let popupsContent = '<p>'+ html +'</p>'; // 定义变量来存储innerHTML的值
+            let popups = document.createElement('div');
+            popups.className = 'pop-ups';
+            popups.innerHTML = popupsContent; // 使用变量作为innerHTML的值
+            document.body.appendChild(popups);
+            // 定时器，5秒后移除弹窗
+            setTimeout(function () {
+                document.body.removeChild(popups);
+            }, 5000);
+            // 弹窗叠加外边距
+            let popupsArr = document.querySelectorAll('.pop-ups');
+            for (let i = 0; i < popupsArr.length; i++) {
+                popupsArr[i].style.marginBottom = (i + 1) * 50 -35 + 'px';
+            }
+        }
+    </script>
+    </script>
+</body>
+
+</html>

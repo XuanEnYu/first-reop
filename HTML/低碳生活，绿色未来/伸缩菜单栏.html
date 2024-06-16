@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伸缩菜单栏</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        ul {
+            width: 400px;
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+        }
+
+        ul li {
+            display: flex;
+            border-bottom: 1px solid #ccc;
+            align-items: center;
+            cursor: pointer;
+            height: auto;
+            flex-wrap: wrap;
+        }
+
+        ul li a {
+            text-decoration: none;
+            width: 400px;
+        }
+
+        ul li div {
+            transition: all 0.3s ease-in-out;
+            overflow: hidden;
+        }
+    </style>
+
+</head>
+
+<body>
+    <ul>
+        <li>
+            <a href="#">ABC123123123</a>
+            <div class="faq" style="opacity: 0; height: 0; display: none;">
+                <p>456456456</p>
+            </div>
+        </li>
+        <li><a href="#">ABC123123123</a>
+            <div class="faq" style="opacity: 0; height: 0; display: none;">
+                <p>456456456</p>
+            </div>
+        </li>
+        <li><a href="#">ABC123123123</a>
+            <div class="faq" style="opacity: 0; height: 0; display: none;">
+                <p>456456456</p>
+            </div>
+        </li>
+        <li><a href="#">ABC123123123</a>
+            <div class="faq" style="opacity: 0; height: 0; display: none;">
+                <p>456456456</p>
+            </div>
+        </li>
+    </ul>
+    <script>
+        function toggleMenu(e) {
+            var target = e.target;
+            while (target.tagName !== "LI" && target !== document.querySelector("ul")) {
+                target = target.parentNode;
+            }
+            var faq = target.querySelector(".faq");
+            if (faq.style.display === "none") {
+                faq.style.display = "block";
+                faq.style.opacity = 1;
+                faq.style.height = faq.scrollHeight + "px";
+            } else {
+                faq.style.opacity = 0;
+                faq.style.height = 0;
+                setTimeout(function () {
+                    faq.style.display = "none";
+                }, 300);
+            }
+        }
+        document.querySelector("ul").addEventListener("click", function (e) {
+            toggleMenu(e);
+        });
+    </script>
+</body>
+
+</html>

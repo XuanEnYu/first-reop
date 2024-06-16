@@ -1,0 +1,680 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    background: #f5f5f5;
+    width: 100%;
+    height: 100vh;
+}
+
+/* 颜色 */
+.text-primary {
+    color: #f7c88a;
+}
+
+.bg-primary {
+    background-color: #f7c88a;
+}
+
+/* 加载动画 */
+.loader {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #242f3f;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.4s ease-in-out;
+}
+
+.loader i {
+    color: #fff;
+    font-size: 35px;
+}
+
+/* 滚动 */
+.container {
+    width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
+.slides {
+    width: 100%;
+    height: 100vh;
+    gap: 50px;
+    scroll-snap-align: start;
+}
+
+i {
+    margin: 0px 5px;
+}
+
+.bg-img1 {
+    background: url(../image/night.png)no-repeat center center/cover;
+}
+
+.bg-img2 {
+    background: url(../image/trees.png)no-repeat center center/cover;
+}
+
+.bg-img3 {
+    background: url(../image/forest.png)no-repeat center center/cover;
+}
+
+/* 流星雨动画 */
+#Meteor {
+    height: 70%;
+    width: 100%;
+}
+
+.star {
+    display: none;
+}
+
+/* 导航栏 */
+#navbar {
+    backdrop-filter: blur(4px);
+    background-color: rgba(0, 0, 0, 0.05);
+    color: #fff;
+    height: 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 10%;
+    position: absolute;
+    width: 100%;
+}
+
+#navbar .logo {
+    font-size: 32px;
+    font-weight: 800;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+#navbar ul {
+    display: flex;
+    height: 100%;
+}
+
+#navbar ul li {
+    list-style: none;
+    height: 100%;
+    width: 120px;
+    display: flex;
+    margin: 0 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+#navbar ul li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 65%;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-radius: 25px;
+}
+
+#navbar ul li a:hover,
+#navbar ul li a.current {
+    color: #f7c88a;
+    background: rgba(255, 255, 255, 0.2);
+    font-size: 17px;
+}
+
+/* 轮播图 */
+.banner {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.banner h1 {
+    color: #fff;
+    text-align: center;
+    font-size: 48px;
+}
+
+.banner p {
+    color: #fff;
+    text-align: center;
+    width: 80%;
+    margin-bottom: 20px;
+    font-size: 19px;
+    line-height: 25px;
+}
+
+.banner span {
+    margin-left: 10px;
+    transition: all 0.3s ease;
+}
+
+.banner .btn {
+    display: inline-flex;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.2);
+    width: 130px;
+    height: 60px;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: 800;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner .btn:hover {
+    background-color: #f7c88a;
+    font-size: 20px;
+}
+
+.banner .btn:hover i {
+    transform: rotate(360deg);
+    transition: all 0.3s ease;
+}
+
+/* 关于我们 */
+.about {
+    background: url(../image/sunse.png) no-repeat center center/cover;
+    padding: 100px 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row-reverse;
+    color: white;
+    overflow: hidden;
+}
+
+.about h2 {
+    font-size: 36px;
+    font-weight: 500;
+    margin-bottom: 50px;
+}
+
+.about span {
+    font-size: 36px;
+    font-weight: 800;
+    margin-right: 10px;
+}
+
+.about p {
+    font-size: 18px;
+    line-height: 30px;
+    text-align: center;
+}
+
+.about-right {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.about-left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.about-item {
+    /* width: 400px; */
+    height: 430px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.about-item h2 {
+    font-weight: 800;
+}
+
+/* about2 */
+#about2 {
+    scroll-behavior: smooth;
+}
+
+.about2 {
+    background: url(../image/great.png) no-repeat center center/cover;
+    padding: 100px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    color: white;
+    overflow: hidden;
+}
+
+.about2-left {
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.about2-left>h1 {
+    font-size: 35px;
+    margin: 10px 0;
+    align-self: start;
+}
+
+.about2-left>img {
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    height: 300px;
+}
+
+.about2-left>p {
+    font-size: 18px;
+}
+
+.about2-right {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.about2-right>h1 {
+    font-size: 35px;
+}
+
+.about2-right>p {
+    font-size: 18px;
+    margin: 40px 0px;
+}
+
+.about2-right-item {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px 0px;
+}
+
+.about2-right-item h2 {
+    align-self: start;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.carousel-inner {
+    display: flex;
+    align-content: space-around;
+    flex-direction: column;
+    /* 垂直排列 */
+    transition: transform 0.5s ease;
+    height: 100%;
+}
+
+.carousel-item {
+    flex: 0 0 auto;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    margin: 20px 0;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    transform: translateY(-50%);
+    height: 30px;
+    width: 30px;
+    color: white;
+    background: rgba(0, 0, 0, 0.1);
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.carousel-control-next:hover {
+    background-color: #f7c88a;
+}
+
+.carousel-control-prev:hover {
+    background-color: #f7c88a;
+}
+
+.carousel-control-prev {
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+}
+
+.carousel-control-next {
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+
+/* 底部 */
+footer {
+    background: url(../image/city.png)no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    overflow: hidden;
+}
+
+.fotter-animation {
+    position: relative;
+    display: flex;
+    width: 30%;
+    overflow: hidden;
+    mask-image: linear-gradient(90deg, transparent, #fff 20%, #fff 80%, transparent);
+}
+
+.fotter-animation div {
+    white-space: nowrap;
+    animation: animate var(--t) linear infinite;
+}
+
+.fotter-animation div:nth-child(2) {
+    animation: animate2 var(--t) linear infinite;
+    animation-delay: calc(var(--t) / -2);
+}
+
+.fotter-animation div span {
+    display: inline-flex;
+    margin: 10px;
+    letter-spacing: .2em;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+@keyframes animate {
+    from {
+        transform: translate(100%);
+    }
+
+    to {
+        transform: translate(-100%);
+    }
+}
+
+@keyframes animate2 {
+    from {
+        transform: translate(0);
+    }
+
+    to {
+        transform: translate(-200%);
+    }
+}
+
+.fotter-box {
+    height: 100px;
+    width: 75%;
+    background: linear-gradient(to right, #f7c88a, #f7c8);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.fotter-box a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    height: 100%;
+    color: #333;
+    background: #fff;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    font-size: 20px;
+}
+
+.fotter-box a:hover {
+    background: #f7c88a;
+    font-size: 25px;
+}
+
+.fotter-box a:hover i {
+    transition: all 0.3s ease;
+    transform: rotate(360deg);
+}
+
+.fotter-nav {
+    width: 100%;
+    height: 100px;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 18px;
+}
+
+.fotter-nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fotter-nav ul li {
+    margin: 0 10px;
+}
+
+.fotter-nav ul li a {
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.fotter-nav ul li a i:hover {
+    transition: all 0.3s ease;
+    transform: rotate(360deg);
+}
+
+/* about页面 */
+/* 手风琴 */
+.wrapper {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper-container {
+    height: 75%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: start;
+}
+
+.card {
+    width: 15vh;
+    border-radius: .75em;
+    background-size: cover;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 2rem;
+    margin: 0 10px;
+    display: flex;
+    align-items: flex-end;
+    transition: .6s cubic-bezier(.28, -0.03, 0, .99);
+    box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.8);
+}
+
+.card>.row {
+    color: #fff;
+    display: flex;
+    flex-wrap: nowrap;
+    padding-bottom: 10px;
+}
+
+.icon {
+    color: #fff;
+    border-radius: 50%;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    opacity: .7;
+    align-items: center;
+    margin: 15px;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.card>.row>.description {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    height: 80px;
+    width: 520px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition-delay: .3s;
+    transition: all .3s ease;
+}
+
+.description p {
+    color: white;
+    /* padding-top: 5px; */
+    font-size: 14px;
+}
+
+.description h4 {
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.wrapper-container input {
+    display: none;
+}
+
+input:checked+.card {
+    width: 600px;
+}
+
+input:checked+label .description {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+.card[for="c1"] {
+    background-image: url(../image/web-pagejpg.jpg);
+}
+
+.card[for="c2"] {
+    background-image: url(../image/code.jpg);
+}
+
+.card[for="c3"] {
+    background-image: url(../image/coding.jpg);
+}
+
+.card[for="c4"] {
+    background-image: url(../image/code2jpg.jpg);
+}
+
+.card[for="c5"] {
+    background-image: url(../image/code3.jpg);
+}
+
+.Contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 100px 70px;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.Contact input,
+.Contact textarea {
+    border: none;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: white;
+    display: flex;
+}
+
+.Contact input {
+    height: 40px;
+}
+
+.Contact p {
+    line-height: 20px;
+    margin: 10px 0;
+    color: #fff;
+    font-size: 20px;
+}
+
+.Contact h1 {
+    margin-left: 10px;
+    font-size: 50px;
+}
+
+.Contact label {
+    font-size: 25px;
+}
+
+.Contact h3 {
+    align-self: flex-start;
+}
+
+.Contact button {
+    background: rgba(255, 255, 255, 0.3);
+    border: none;
+    color: #fff;
+    border-radius: 10px;
+    width: 120px;
+    height: 40px;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.Contact button:hover {
+    background: #f7c88a;
+    font-size: 20px;
+}
