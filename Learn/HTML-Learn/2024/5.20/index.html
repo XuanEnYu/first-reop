@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing:border-box
+        }
+        body{
+            background: #333;
+        }
+        #clock{
+            width: 120px;
+            height: 50px;
+            background: #f6f6f6;
+            font-size: 24px;
+            text-align: center;
+            border-radius: 6px;
+            line-height: 50px;
+            margin-top: 50px;
+        }
+        .box{
+            display: flex;
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+    <div id="clock"></div>
+</div>
+    <script>
+        let oclock = document.querySelector('#clock');
+        let addZero =  (num) => {
+            if(num >=10){
+                return num;
+            }else{
+                return `0${num}`;
+            }
+        }
+        let updateTime = document = () => {
+            let now = new Date();
+            let time= addZero(now.getHours()) + ":" +
+            addZero(now.getMinutes()) + ":" +
+            addZero(now.getSeconds());
+            oclock .innerText = time;
+        }
+        updateTime();
+        setInterval(updateTime,1000);
+    </script>
+</body>
+</html>

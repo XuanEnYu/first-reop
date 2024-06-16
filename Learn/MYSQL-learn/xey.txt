@@ -1,0 +1,367 @@
+create table student(
+   sno int(10) auto_increment,
+  sname varchar(8) not null,
+  sex char(1) default '男',
+  age int(3),
+  enterdate date,
+  classname varchar(10),
+  email varchar(15),
+	constraint pk_stu_sno primary key(sno),
+  constraint chk_stu_sex check(sex='男'||sex='女'),
+	constraint chk_stu_age check(age>=16 && age<=20)
+-- 	constraint uq_stu_email unique(email)
+);
+desc t_student;
+drop table t_student;
+
+alter table t_student add constraint uq_stu_email unique(email);
+
+INSERT into student VALUES(1,'张三','男',18,'2023-9-1','4班','123123@163.com');
+INSERT into student VALUES(2,'张四','男',18,'2023-9-1','4班','123123@163.com');
+INSERT into student VALUES(3,'张五','男',18,'2023-9-1','4班','123123@163.com');
+INSERT into student VALUES(4,'张六','男',18,'2023-9-1','4班','123123@163.com');
+INSERT into student VALUES(5,'张七','男',18,'2023-9-1','4班','123123@163.com');
+INSERT into student VALUES(6,'张三','男',18,'2023-9-1','4班','123123@163.com');
+INSERT into student VALUES(7,'丽丽','女',18,'2023-9-1','4班','123123@163.com');
+
+SELECT * from student
+DELETE FROM student WHERE sname="丽丽";
+create table student(
+   sno int(10) auto_increment,
+  sname varchar(8) not null,
+  sex char(1) default '男',
+  age int(3),
+  enterdate date,
+  classname varchar(10),
+  email varchar(15),
+	constraint pk_stu_sno primary key(sno),
+  constraint chk_stu_sex check(sex='男'||sex='女'),
+	constraint chk_stu_age check(age>=16 && age<=20)
+-- -- 	constraint uq_stu_email unique(email)
+);
+desc t_student;
+drop table t_student;
+
+alter table t_student add constraint uq_stu_email unique(email);
+
+INSERT into student VALUES(1,'张三','男',18,'2023-9-1','4班','123123@163.com');
+INSERT into student VALUES(2,'张四','男',18,'2023-9-1','4班','123123@163.com');
+INSERT into student VALUES(3,'张五','男',18,'2023-9-1','4班','123123@163.com');
+INSERT into student VALUES(4,'张六','男',18,'2023-9-1','4班','123123@163.com');
+INSERT into student VALUES(5,'张七','男',18,'2023-9-1','4班','123123@163.com');
+INSERT into student VALUES(6,'张三','男',18,'2023-9-1','4班','123123@163.com');
+INSERT into student VALUES(7,'丽丽','女',18,'2023-9-1','4班','123123@163.com');
+
+SELECT * from student
+
+DELETE FROM student WHERE sname="丽丽";
+
+ALTER TABLE student add callid FLOAT(6.2);
+
+ALTER TABLE student add id FLOAT(6.2) AFTER age; 
+
+alter table student drop callid;
+
+insert into student(id,callid) VALUES(114514541,114514514);
+
+create table dept(
+DEPTNO int(3) primary key,
+DNAME VARCHAR(15),
+LOC VARCHAR(15)
+);
+
+SELECT * FROM dept
+
+INSERT into dept VALUES(10,'AOUNTING','NEW YORKE');
+INSERT into dept VALUES(20,'RESEARCH','DALLAS');
+INSERT into dept VALUES(30,'SALES','CHIGAGO');
+INSERT into dept VALUES(40,'OPERATIDNS','BOSTON');
+
+create table emp(
+EMPNO int(4),
+ENAME VARCHAR(10),
+JOB VARCHAR(10),
+MGR int(4),
+HIREDATE  VARCHAR(10),
+SAL int(4),
+COMM int(4),
+DEPTNO int(2)
+);
+
+SELECT * FROM emp;
+
+drop table emp;
+
+INSERT into emp VALUES(7369,'SMITH','CLERK',7902,'1980-12-17',800,NULL,20); 
+INSERT into emp VALUES(7499,'ALLEN','SALESMAN',7698,'1981-02-20',1600,300,30);
+INSERT into emp VALUES(7521,'WARD','SALESMAN',7698,'1981-02-22',1250,500,30);
+INSERT into emp VALUES(7566,'JONES','MANAGER',7839,'1981-04-02',2795,null,20);
+INSERT into emp VALUES(7554,'MARTIN','SALESMAN',7698,'1981-09-28',1250,1400,30);
+INSERT into emp VALUES(7598,'BLAKE','MANAGER',7839,'1981-05-01',2850,null,30);
+INSERT into emp VALUES(7782,'CLARK','MANAGER',7839,'1981-06-09',2450,null,10);
+INSERT into emp VALUES(7788,'SCOTT','ANALYST',7566,'1981-04-19',3000,null,20);
+INSERT into emp VALUES(7739,'KING','PRESIDENT',null,'1981-11-17',5000,null,10);
+INSERT into emp VALUES(7744,'TURENR','SALESMAN',7698,'1981-09-08',1500,0,30);
+INSERT into emp VALUES(7776,'ADAMS','CLERK',7788,'1987-05-23',1100,null,20);
+INSERT into emp VALUES(7700,'JAMES','CLERK',7698,'1981-12-03',950,null,30);
+INSERT into emp VALUES(7702,'FORD','ANALYST',7566,'1981-12-03',3000,null,20);
+INSERT into emp VALUES(7782,'MILLER','CLERK',7782,'1982-01-23',1300,null,10);
+
+
+
+-- 建表
+ create table DEPT(
+		    DEPTNO int(5) not null,
+				DNAME varchar (14),
+				LOC   varchar (13)
+				);
+			alter table DEPT
+			   add constraint PK_DEPT primary key (DEPTNO);
+
+	 create table EMP(
+	     EMPNO int (4) primary key,
+			 ENAME varchar (10),
+			 JOB   varchar (9),
+			 MGR   int (4),
+			 HIREDATE date,
+			 SAL   double (7,2),
+			 COMM  double (7,2),
+			 DEPTNO int (5)
+		 );
+		 alter table EMP
+		    add constraint FK_DEPTNO foreign key (DEPTNO)
+				      references DEPT (DEPTNO);
+	create table SALGRADE(
+	    GRADE int primary key,
+			LOSAL double (7,2),
+			HISAL double (7,2)
+		);
+	create table BONUS(
+	  ENAME varchar (10),
+		JOB   varchar (9),
+	  SAL   double (7,2),
+		COMM  double (7,2)
+	);
+
+
+
+
+
+
+
+-- 插入数据
+
+insert into DEPT (DEPTNO,DNAME,LOC)
+	values (10,'ACCOUNTING','NEW YORK');
+	insert into DEPT (DEPTNO,DNAME,LOC)
+	values (20,'RESEARCH','DALLAS');
+	insert into DEPT (DEPTNO,DNAME,LOC)
+	values (30,'SALES','CHIGAGO');
+	insert into DEPT (DEPTNO,DNAME,LOC)
+	values (40,'OPERATIDNS','BOSTON');
+	
+	
+	insert into EMP (EMPNO,ENAME,JOB,MGR,HIREDATE,SAL,COMM,DEPTNO)
+	values (7369, 'SMITH', 'CLERK', 7902, '1980-12-17', 800, null, 20);
+	insert into EMP (EMPNO,ENAME,JOB,MGR,HIREDATE,SAL,COMM,DEPTNO)
+	values (7499, 'ALLEN', 'SALESMAN', 7698, '1981-02-20', 1600, 300, 30);
+	insert into EMP (EMPNO,ENAME,JOB,MGR,HIREDATE,SAL,COMM,DEPTNO)
+	values (7521, 'WARD', 'SALESMAN', 7698, '1981-02-22', 1250, 500, 30);
+	insert into EMP (EMPNO,ENAME,JOB,MGR,HIREDATE,SAL,COMM,DEPTNO)
+	values (7566, 'JONES', 'MANAGER', 7839, '1981-04-02', 2975, null, 20);
+	insert into EMP (EMPNO,ENAME,JOB,MGR,HIREDATE,SAL,COMM,DEPTNO)
+	values (7654, 'MARTIN', 'SALESMAN', 7698, '1981-09-28', 1250, 1400, 30);
+	insert into EMP (EMPNO,ENAME,JOB,MGR,HIREDATE,SAL,COMM,DEPTNO)
+	values (7698, 'BLAKE', 'MANAGER', 7839, '1981-05-01', 2850, NULL, 30);
+	insert into EMP (EMPNO,ENAME,JOB,MGR,HIREDATE,SAL,COMM,DEPTNO)
+	values (7782, 'CLARK', 'MANAGER', 7839, '1981-06-09', 2450, NULL, 10);
+	insert into EMP (EMPNO,ENAME,JOB,MGR,HIREDATE,SAL,COMM,DEPTNO)
+	values (7788, 'SCOTT', 'ANALYST', 7566, '1987-04-19', 3000, NULL, 20);
+	insert into EMP (EMPNO,ENAME,JOB,MGR,HIREDATE,SAL,COMM,DEPTNO)
+	values (7839, 'KING', 'PRESIDENT', NULL, '1981-11-17', 5000, NULL, 10);
+	insert into EMP (EMPNO,ENAME,JOB,MGR,HIREDATE,SAL,COMM,DEPTNO)
+	values (7844, 'TURENR', 'SALESMAN', 7698, '1981-09-08', 1500, 0, 30);
+	insert into EMP (EMPNO,ENAME,JOB,MGR,HIREDATE,SAL,COMM,DEPTNO)
+	values (7876, 'ADAMS', 'CLERK', 7788, '1987-05-23', 1100, NULL, 20);
+	insert into EMP (EMPNO,ENAME,JOB,MGR,HIREDATE,SAL,COMM,DEPTNO)
+	values (7900, 'JAMES', 'CLERK', 7698, '1981-12-03', 950, NULL, 30);
+		insert into EMP (EMPNO,ENAME,JOB,MGR,HIREDATE,SAL,COMM,DEPTNO)
+	values (7902, 'FORD', 'ANALYST', 7566, '1981-12-03', 3000, NULL, 20);
+		insert into EMP (EMPNO,ENAME,JOB,MGR,HIREDATE,SAL,COMM,DEPTNO)
+	values (7934, 'MILLER', 'CLERK', 7782, '1982-01-23', 1300, NULL, 10);
+	
+	
+	insert into SALGRADE (GRADE, LOSAL,HISAL)
+	 values (1, 700, 1200);
+	 	insert into SALGRADE (GRADE, LOSAL,HISAL)
+	 values (2, 1201, 1400);
+	 	insert into SALGRADE (GRADE, LOSAL,HISAL)
+	 values (3, 1401, 2000);
+	 insert into SALGRADE (GRADE, LOSAL,HISAL)
+	 values (4, 2001, 3000);
+	 insert into SALGRADE (GRADE, LOSAL,HISAL)
+	 values (5, 3001, 9999);
+	 -- 1函数的使用：单行函数（最多：字符串函数，数字函数，日期函数，流程判断函数...）和多行函数(聚合函数)（sum,avg,max,min,count）
+
+-- 1: 查询员工工资的总额,工资的最大值，工资最少值，领取工资的人数，平均工资
+
+  select * from emp;
+	
+	select sum(sal) 工资总额,avg(sal),max(sal),min(sal),count(sal)from emp;
+	
+	select ename,lower(ename),upper(ename) from emp;
+	
+2:查询部门编号，并输出各个部门的平均工资 分组查询 group by +分组字段
+
+  select deptno from emp;
+
+   select deptno,avg(sal) from emp; -- 字段不能跟多行函数一起使用
+	 
+	 select deptno,avg(sal) from emp group by deptno order by avg(sal);
+ -- 查询工作岗位，并输入各个工作岗位的平均工资
+-- 1函数的使用：单行函数（最多：字符串函数，数字函数，日期函数，流程判断函数...）和多行函数(聚合函数)（sum,avg,max,min,count）
+
+-- 1: 查询员工工资的总额,工资的最大值，工资最少值，领取工资的人数，平均工资
+
+  select * from emp;
+	
+	select sum(sal) 工资总额,avg(sal),max(sal),min(sal),count(sal)from emp;
+	
+	select ename,lower(ename),upper(ename) from emp;
+	
+2:查询部门编号，并输出各个部门的平均工资 分组查询 group by +分组字段
+
+  select deptno from emp;
+
+   select deptno,avg(sal) from emp; -- 字段不能跟多行函数一起使用
+	 
+	 select deptno,avg(sal) from emp group by deptno order by avg(sal);
+ 
+ -- 查询工作岗位，并输出各个工作岗位的平均工资
+ 
+  select job , avg(sal)from emp group by job;
+	
+	3:二次筛选 having
+ 
+ -- 查询工作岗位，并输出各个工作岗位的平均工资，除了manager 
+ 
+  select job,avg(sal) from emp where job !="manager" group by job;
+	
+	select job , avg(sal)from emp group by job having job !="manager";
+	
+	4:limit 分页查询
+	
+	 select * from emp limit 3,5;
+	 
+作业：
+ 
+      1：统计各个部门的最高工资，排除工资小3000的部门
+			
+			2：统计部门人数小于4的部门平均工资；
+	select * from emp;
+	select job,avg(sal) from emp groub by job;
+	 alter table el modify avg(sal) int(8);
+	 
+	select job,avg(sal) from emp group by job having count(job)<4;
+	
+	
+	-- 建表
+ create table DEPT(
+		    DEPTNO int(5) not null,
+				DNAME varchar (14),
+				LOC   varchar (13)
+				);
+			alter table DEPT
+			   add constraint PK_DEPT primary key (DEPTNO);
+
+	 create table EMP(
+	     EMPNO int (4) primary key,
+			 ENAME varchar (10),
+			 JOB   varchar (9),
+			 MGR   int (4),
+			 HIREDATE date,
+			 SAL   double (7,2),
+			 COMM  double (7,2),
+			 DEPTNO int (5)
+		 );
+		 alter table EMP
+		    add constraint FK_DEPTNO foreign key (DEPTNO)
+				      references DEPT (DEPTNO);
+	create table SALGRADE(
+	    GRADE int primary key,
+			LOSAL double (7,2),
+			HISAL double (7,2)
+		);
+	create table BONUS(
+	  ENAME varchar (10),
+		JOB   varchar (9),
+	  SAL   double (7,2),
+		COMM  double (7,2)
+	);
+
+
+
+
+
+
+
+-- 插入数据
+
+insert into DEPT (DEPTNO,DNAME,LOC)
+	values (10,'ACCOUNTING','NEW YORK');
+	insert into DEPT (DEPTNO,DNAME,LOC)
+	values (20,'RESEARCH','DALLAS');
+	insert into DEPT (DEPTNO,DNAME,LOC)
+	values (30,'SALES','CHIGAGO');
+	insert into DEPT (DEPTNO,DNAME,LOC)
+	values (40,'OPERATIDNS','BOSTON');
+	
+	
+	insert into EMP (EMPNO,ENAME,JOB,MGR,HIREDATE,SAL,COMM,DEPTNO)
+	values (7369, 'SMITH', 'CLERK', 7902, '1980-12-17', 800, null, 20);
+	insert into EMP (EMPNO,ENAME,JOB,MGR,HIREDATE,SAL,COMM,DEPTNO)
+	values (7499, 'ALLEN', 'SALESMAN', 7698, '1981-02-20', 1600, 300, 30);
+	insert into EMP (EMPNO,ENAME,JOB,MGR,HIREDATE,SAL,COMM,DEPTNO)
+	values (7521, 'WARD', 'SALESMAN', 7698, '1981-02-22', 1250, 500, 30);
+	insert into EMP (EMPNO,ENAME,JOB,MGR,HIREDATE,SAL,COMM,DEPTNO)
+	values (7566, 'JONES', 'MANAGER', 7839, '1981-04-02', 2975, null, 20);
+	insert into EMP (EMPNO,ENAME,JOB,MGR,HIREDATE,SAL,COMM,DEPTNO)
+	values (7654, 'MARTIN', 'SALESMAN', 7698, '1981-09-28', 1250, 1400, 30);
+	insert into EMP (EMPNO,ENAME,JOB,MGR,HIREDATE,SAL,COMM,DEPTNO)
+	values (7698, 'BLAKE', 'MANAGER', 7839, '1981-05-01', 2850, NULL, 30);
+	insert into EMP (EMPNO,ENAME,JOB,MGR,HIREDATE,SAL,COMM,DEPTNO)
+	values (7782, 'CLARK', 'MANAGER', 7839, '1981-06-09', 2450, NULL, 10);
+	insert into EMP (EMPNO,ENAME,JOB,MGR,HIREDATE,SAL,COMM,DEPTNO)
+	values (7788, 'SCOTT', 'ANALYST', 7566, '1987-04-19', 3000, NULL, 20);
+	insert into EMP (EMPNO,ENAME,JOB,MGR,HIREDATE,SAL,COMM,DEPTNO)
+	values (7839, 'KING', 'PRESIDENT', NULL, '1981-11-17', 5000, NULL, 10);
+	insert into EMP (EMPNO,ENAME,JOB,MGR,HIREDATE,SAL,COMM,DEPTNO)
+	values (7844, 'TURENR', 'SALESMAN', 7698, '1981-09-08', 1500, 0, 30);
+	insert into EMP (EMPNO,ENAME,JOB,MGR,HIREDATE,SAL,COMM,DEPTNO)
+	values (7876, 'ADAMS', 'CLERK', 7788, '1987-05-23', 1100, NULL, 20);
+	insert into EMP (EMPNO,ENAME,JOB,MGR,HIREDATE,SAL,COMM,DEPTNO)
+	values (7900, 'JAMES', 'CLERK', 7698, '1981-12-03', 950, NULL, 30);
+		insert into EMP (EMPNO,ENAME,JOB,MGR,HIREDATE,SAL,COMM,DEPTNO)
+	values (7902, 'FORD', 'ANALYST', 7566, '1981-12-03', 3000, NULL, 20);
+		insert into EMP (EMPNO,ENAME,JOB,MGR,HIREDATE,SAL,COMM,DEPTNO)
+	values (7934, 'MILLER', 'CLERK', 7782, '1982-01-23', 1300, NULL, 10);
+	
+	
+	insert into SALGRADE (GRADE, LOSAL,HISAL)
+	 values (1, 700, 1200);
+	 	insert into SALGRADE (GRADE, LOSAL,HISAL)
+	 values (2, 1201, 1400);
+	 	insert into SALGRADE (GRADE, LOSAL,HISAL)
+	 values (3, 1401, 2000);
+	 insert into SALGRADE (GRADE, LOSAL,HISAL)
+	 values (4, 2001, 3000);
+	 insert into SALGRADE (GRADE, LOSAL,HISAL)
+	 values (5, 3001, 9999);
+	 
+	 select * FROM emp
+	 
+	 select * FROM emp where ename like "%L_"
+	 
+	 SELECT job ,AVG(SAL) FROM emp GROUP BY job
+	 
+

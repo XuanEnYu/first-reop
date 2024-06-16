@@ -1,0 +1,81 @@
+body{
+background-color: #f3F5f7;
+}
+.middle{
+    box-shadow: 5px 5px 5px silver;
+    width: 1200px;
+    height: 52px;
+    line-height: 52px;
+    margin:25px auto;
+    background: white;
+    border-radius: 6px;
+    padding: 0 20px;
+}
+.middle h4{
+    float: left;
+    margin-right: 50px;
+}
+.middle ul li{
+    margin-left: 50px;
+    list-style: none;
+    float: left;
+}
+.middle a{
+    margin-right: 10px;
+    float: right;
+    margin: auto;
+}
+.middle ul li a{
+    border-left: black;
+    color: silver;
+}
+.box-hd{
+    width: 1200px;
+    margin: auto;
+    height: 20px;
+    line-height: 20px;
+    padding: 0 20px;
+}
+.box-hd h4{
+    float: left;
+}
+.box-hd a{
+    float: right;
+}
+.countBox{
+    margin: auto;
+    width: 1200px;
+    height: 485px;
+}
+.countBox-body{
+    margin: auto;
+    width: 1200px;
+    height: 485px;
+}
+.countBox-body ul li{
+    float: left;
+    list-style: none;
+    width: 235px;
+    height: 230px;
+    margin-left: 5px;
+    margin-top: 10px;
+    background: white;
+    box-shadow: 1px 1px 4px silver;
+    border-radius: 6px;
+}
+.countBox-body-box1{
+    background: url(../img/pic.png);
+}
+.countBox-body span{
+    color: slategray;
+}
+.countBox-body ul li span p{
+    color: orange;
+    float: left;
+}
+.countBox-body ul li img{
+    width: 235px;
+    height: 155px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}

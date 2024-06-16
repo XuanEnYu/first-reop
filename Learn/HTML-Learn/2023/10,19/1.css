@@ -1,0 +1,22 @@
+.a{
+    text-align: center;
+    padding: 60px;
+    font-size: 20px;
+    outline-style: none;
+    border: 0px solid #ccc;
+    border-radius: 3px;
+}
+.b{
+    color: lightblue;
+    font-size: 20px;
+    text-align: center;
+}
+body{
+background: no-repeat;
+background-image: url(./123.jpg);
+background-size: cover;
+}
+.biaoti{
+    font-size: 30px;
+    text-align: center;
+}

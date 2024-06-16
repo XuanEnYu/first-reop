@@ -1,0 +1,23 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+div{
+    float: left;
+}
+.box{
+    width: 108px;
+    height: 105px;
+    background: url(../img/abcd.jpg) no-repeat  -255px -560px ;
+}
+.box2{
+    width: 108px;
+    height: 115px;
+    background: url(../img/abcd.jpg) no-repeat  -480px -5px ;
+}
+.box3{
+    width: 115px;
+    height: 110px;
+    background: url(../img/abcd.jpg) no-repeat  -365px -555px ;
+}

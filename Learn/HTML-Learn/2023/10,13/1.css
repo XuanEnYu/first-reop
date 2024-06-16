@@ -1,0 +1,15 @@
+table{
+    border:1px solid pink;
+    width: 800px;
+    border-spacing: 0;
+    margin: auto;
+}
+th,td{
+    border:1px solid pink;
+    text-align: center;
+    padding: 20px;
+}
+.tab{
+font-size: 30px;
+color: brown;
+}

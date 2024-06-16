@@ -1,0 +1,76 @@
+.banner-background{
+    background: rgb(0, 8, 119);
+    margin-top: 10px;
+}
+.banner{
+    width: 1200px;
+    height: 420px;
+    background: url(../img/banner2.png) no-repeat center;
+    margin: auto;
+}
+.banner-leftbox{
+    width: 200px;
+    background: rgba(0, 0, 0, 0.4);
+    float: left;
+    height: 420px;
+    position: absolute;
+}
+.banner-leftbox ul li{
+    list-style: none;
+    height: 46.5px;
+    line-height: 45px;
+    padding:0px 25px;
+}
+.banner-leftbox ul li:hover{
+    background: rgba(0, 131, 253, 0.4);
+}
+.banner-leftbox ul li span{
+    float: right;
+    color: white;
+}
+.banner-leftbox ul li a{
+    color: white;
+}
+.banner-rightbox{
+    width: 200px;
+    height: 260px;
+    background: white;
+    float: right;
+    margin: 20px;
+    margin-top: 60px;
+    border-radius: 6px;
+}
+.rightbox-text ul li{
+    list-style: none;
+    border-bottom: 1px solid silver;
+    padding:10px;
+}
+.rightbox-text ul li p{
+    color: silver;
+    font-size: 14px;
+}
+.rightbox-nav{
+    height: 35px;
+    background: cornflowerblue;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+}
+.rightbox-nav h2{
+    text-align: center;
+    color: white;
+}
+.button{
+    margin-top: 5px;
+    margin-left: 20px;
+}
+.button button{
+    display: block;
+    width: 160px;
+    height: 30px;
+    background: cornflowerblue;
+    border: 0px;
+    border-radius: 6px;
+}
+.button button:hover{
+    background: cyan;
+}

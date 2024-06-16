@@ -1,0 +1,175 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    margin: auto;
+}
+#nav {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    background: #eefcff;
+    border-bottom: 5px solid cornflowerblue;
+}
+
+#nav .logo {
+    flex: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+#nav .rightnav {
+    flex: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    margin-right: 100px;
+}
+
+#nav .rightnav .login {
+    flex: 1;
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+    width: 100%;
+    padding-right: 15px;
+}
+
+#nav .rightnav .login a {
+    margin-left: 20px;
+}
+
+#nav .rightnav .table {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    height: 100%;
+    width: 100%;
+    align-items: end;
+}
+
+#nav .rightnav .table li {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    transition: all.3 ease;
+}
+
+#nav .rightnav .table li:hover {
+    background: cornflowerblue;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+#nav .rightnav .table li a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#nav .rightnav .table li a:hover {
+    color: white;
+}
+#banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#banner ul{
+    align-self:end;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+#banner ul li{
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, .4);
+    border: 1px solid rgba(255, 255, 255, .2);
+}
+#banner ul li:hover{
+    background: cornflowerblue;
+}
+#middle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+#middle .leftbox{
+    flex:3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#middle .leftbox .top{
+    display: flex;
+}
+#middle .leftbox .top .left,
+#middle .leftbox .top .right{
+    display: flex;
+    flex-direction: column;
+}
+#middle .leftbox .top .left .text,
+#middle .leftbox .top .right .text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 324px;
+}
+#middle .leftbox .top .left .img{
+    background: url(./images/lydjy.jpg)no-repeat center center/cover;
+    height: 40px;
+}
+#middle .leftbox .top .right .img{
+    background: url(./images/xwdt.jpg)no-repeat center center/cover;
+    height: 40px;
+}
+#middle .leftbox .bottom{
+
+}
+#middle .rightbox{
+    flex:1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#middle .rightbox .top{
+    
+}
+#middle .rightbox .bottom{
+
+}
+#footer{
+    width: 100%;
+    height: 60px;
+    background: #eefcff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#footer .logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#footer  .text{
+    text-align: center;
+}

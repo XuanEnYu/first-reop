@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+         .box{
+            max-width: 1100px;
+            height: 150px;
+            display: flex;
+            margin: 100px auto;
+            border-radius: 10px;
+            box-shadow: 4px 4px 10px silver;
+         }
+         .boxson:nth-child(1){
+            background: yellow;
+            display: block;
+            width: 200px;
+            height: 150px;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+         }
+         .boxson:nth-child(2){
+            background: red;
+            flex: 1;
+         }
+         .boxson:nth-child(3){
+            width: 200px;
+            height: 150px;
+            background: green;
+            display: block;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+         }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="boxson"></div>
+        <div class="boxson"></div>
+        <div class="boxson"></div>
+    </div>
+</body>
+</html>

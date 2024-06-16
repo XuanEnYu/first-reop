@@ -1,0 +1,76 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background: url(../img/123.jpg) no-repeat;
+    background-size: cover;
+}
+.box{
+    width: 1200px;
+    height: 660px;
+    margin: 70px auto;
+}
+.box2{
+    float: left;
+    height: 660px;
+    width: 220px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 6px;
+}
+.box3 > div{
+    float: left;
+    margin: auto 10px;
+}
+.box3 > div:nth-child(1){
+    width: 220px;
+    height: 325px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 6px;
+}
+.box3 > div:nth-child(2){
+    width: 220px;
+    height: 325px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 6px;
+}
+.box3 > div:nth-child(3){
+    width: 220px;
+    height: 325px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 6px;
+}
+.box3 > div:nth-child(4){
+    width: 220px;
+    height: 325px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 6px;
+}
+.box3 > div:nth-child(5){
+    width: 220px;
+    height: 325px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 6px;
+    margin-top: 10px;
+}
+.box3 > div:nth-child(6){
+    width: 220px;
+    height: 325px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 6px;
+    margin-top: 10px;
+}
+.box3 > div:nth-child(7){
+    width: 220px;
+    height: 325px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 6px;
+    margin-top: 10px;
+}
+.box3 > div:nth-child(8){
+    width: 220px;
+    height: 325px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 6px;
+    margin-top: 10px;
+}

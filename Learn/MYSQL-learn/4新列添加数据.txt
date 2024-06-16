@@ -1,0 +1,85 @@
+create table stu4(
+    
+sno int (10),
+	 
+sname varchar (8),
+	
+ sex char (1),
+	 
+age int (3),
+	 
+enterday date,
+	
+ classname varchar (10),
+	 
+email varchar (15)
+ );-- 建表语句
+insert into stu4
+values (1,'张三','男',18,'2022-3-1','程序1班','123@163.com');
+
+insert into stu4 values (3,'李四','男',18,'2022-3-1','程序2班','123@163.com');
+
+insert into stu4 values (2,'娜娜','女',18,'2022-3-1','程序3班','123@163.com');
+
+insert into stu4 values (4,'莉莉','女',18,'2022-3-1','程序4班','123@163.com');-- 添加数据
+
+-- insert into stu4(score)values (95) where sname= "张三";
+
+
+select * from stu4;
+
+
+-- 为学生表stu4增加成绩列
+
+alter table stu4 add score float(6,2) first;
+-- 添加新列为第一列
+
+alter table stu4 add score float(6,2) after sex
+
+
+-- 删除一列
+
+ alter table stu4 drop score2;
+-- 语法结构：
+     
+-- alter table+ 表名 + add + 新字段名称 字段数据类型（数据长度）+(定位)
+		 
+	 -- 为张三添加成绩为95分
+	 
+	 update stu4 set score = 100 where sname = "张三";
+	 
+	 -- modify 修改表中字段的数据类型或者定义  change 修改表中字段的名称和数据类型或定义
+	 
+	 -- 修改分数数据类型为双精度浮点型数据，长度为4,1为小数
+	 
+	 alter table stu4 modify score double (4,1);
+	
+	语法结构：alter + table + 表名+ modify + 列名称 + 新的数据类型和长度
+		 
+-- 修改分数列的名称为score2,数据类型为float ,长度为6，2为小数
+
+   alter table stu4 change score score2 float(6,2);
+	  
+	语法结构：alter + table + 表名+ change + 旧列名称 +新列名称 + 新的数据类型和长度
+
+总结：
+1 ：为新添加列插入数据用update，并且要加上对应的条件 where;
+2:  修改列的数据类型和长度的时候，用alter + modify;
+3:  修改列的名称和数据类型，长度的时候用 alter+ change
+
+
+ 作业：
+ 
+  1：在学生表中添加电话号码字段 用整形数据
+	
+2: 为张三的电话号码添加为13800138000
+	
+
+3：修改电话号码字段的数据类型为 varchar;
+alter table stu4 add callid float(6,2) first;
+
+update stu4 set callid = 13800138000 where sname = "张三";
+
+alter table stu4 modify callid varchar (15);
+
+select * from stu4;

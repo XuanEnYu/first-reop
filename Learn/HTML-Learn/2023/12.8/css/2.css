@@ -1,0 +1,27 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #e6e6e6;
+}
+.nav{
+    height: 40px;
+}
+.nav ul li{
+    list-style: none;
+    float: left;
+    margin: 10px;
+}
+.nav ul li div{
+    margin-top: 20px;
+    transition: 0.4s;
+    width: 240px;
+    height: 0px;
+    background: white;
+}
+.nav ul li p:hover div{
+    cursor: pointer;
+    height: 240px;
+}

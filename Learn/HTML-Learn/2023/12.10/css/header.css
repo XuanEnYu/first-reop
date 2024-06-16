@@ -1,0 +1,305 @@
+.header{
+    height: 45px;
+    margin-top: 7px;
+}
+.header-Search{
+    width: 500px;
+    height: 44px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, .8);
+    padding-left: 5px;
+    float: left;
+    margin-left: 160px;
+    margin-right: 160px;
+}
+.header-Search input{
+    float: left;
+    width: 450px;
+    height: 32px;
+    padding-left: 10px;
+    border:0px;
+    outline: none;
+    margin-top: 5px;
+    border-radius: 7px;
+    color: white;
+    background: rgba(0, 0, 0, 0);
+    transition: 0.45;
+}
+.header-Search input:hover{
+    background: rgba(255, 255, 255, .1);
+}
+.header-Search button{
+    height: 32px;
+    width: 32px;
+    float: left;
+    margin: 5px;
+    border-radius: 6px;
+    background: rgba(0, 0, 0, 0);
+}
+.header-Search button:hover{
+    background: rgba(255, 255, 255, .1);
+}
+.header-nav ul li{
+    position: relative;
+    padding: 10px;
+    display: block;
+    list-style: none;
+    float: left;
+    margin-bottom: 10px;
+}
+.header-nav ul li div{
+    /* margin-top: 15px; */
+    position: absolute;
+    background: rgba(0, 0, 0, .8);
+    border-radius: 10px;
+    transition:0.45s;
+    z-index: 1;
+    opacity: 0;
+    width: 150px;
+    height: 0px;
+    top: 40px;
+}
+.header-nav ul li:hover .navh{
+    opacity: 1;
+    height: 200px;
+    width: 300px;
+}
+.header-nav ul li:hover .navh_1{
+    opacity: 1;
+    height: 200px;
+    width: 280px;
+}
+.header-nav ul li:hover .navh_2{
+    opacity: 1;
+    height: 260px;
+    width: 400px;
+}
+.header-nav ul li:hover .navh_3{
+    opacity: 1;
+    height: 200px;
+    width: 320px;
+}
+.header-nav ul li:hover .navh_4{
+    opacity: 1;
+    height: 200px;
+    width: 240px;
+}
+.navh{
+    left: -10px;
+}
+.navh_1{
+    left: -10px;
+}
+.navh_2{
+    left: -10px;
+}
+.navh_3{
+    left: -10px;
+}
+.navh_4{
+    left: -10px;
+}
+.right-nav{
+    height: 45px;
+    float: left;
+}
+.right-nav>.user{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: cornflowerblue;
+    color: white;
+    text-align: center;
+}
+.right-nav:hover .userlogin{
+    display: block;
+}
+.userlogin{
+    display: none;
+    position: absolute;
+    width: 820px;
+    height: 420px;
+    border-radius: 15px;
+    background:white;
+    z-index: 1;
+    top: 50%;
+    margin-top: -210px;
+    left: 50%;
+    margin-left: -410px;
+}
+.userlogin img{
+    width: 130px;
+    height: 130px;
+}
+.userlogin .tu1{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.userlogin .tu2{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.userlogin .close{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color:black;
+}
+.userlogin .left-userlogin{
+    margin-left: 80px;
+    margin-top: 55px;
+    width: 210px;
+    height: 250px;
+    color: black;
+    float: left;
+}
+.userlogin .left-userlogin img{
+    width: 170px;
+    height: 150px;
+    margin-top: 15px;
+}
+.userlogin .left-userlogin a{
+    text-decoration: none;
+    color: cornflowerblue;
+}
+.userlogin .left-userlogin p{
+    margin-top: 15px;
+    color: rgb(128, 128, 128);
+}
+.userlogin .left-userlogin .erweima{
+    font-size: 18px;
+}
+.border{
+    border-left: 1px solid rgba(192, 192, 192, 0.753);
+    width: 1px;
+    height: 210px;
+    float: left;
+    margin-top: 100px;
+    margin-left: 10px;
+}
+.userlogin .right-userlogin{
+    float: right;
+    width: 400px;
+    height: 280px;
+    margin-right: 80px;
+    margin-top: 50px;
+    color: black;
+}
+.right-userlogin .right-userlogin-text{
+    font-size: 20px;
+    margin-right: 20px;
+    color: cornflowerblue;
+}
+.right-userlogin .right-userlogin-text2{
+    font-size: 20px;
+    margin-left: 20px;
+    color: rgb(80, 80, 80);
+}
+.userlogin .right-userlogin .cut{
+    font-size: 20px;
+}
+.right-userlogin-button{
+    width: 400px;
+    height: 250px;
+    margin-top: 20px;
+}
+.right-userlogin-input{
+    width: 400px;
+    height: 85px;
+    border: 1px solid silver;
+    border-radius: 10px;
+}
+.right-userlogin-inputbottom{
+    float: left;
+    height: 40px;
+    width: 400px;
+    border-bottom: 1px solid silver ;
+    border-radius: 2px;
+}
+.right-userlogin-input p{
+    float: left;
+    display: block;
+    width: 38px;
+    height: 38px;
+    margin: 8px 6px 5px 5px;
+}
+.right-userlogin-inputbottom .input-text{
+    float: left;
+    width: 250px;
+    height: 38px;
+    outline: none;
+    margin-left: 5px;
+}
+.right-userlogin-input-text{
+    float: left;
+    height: 40px;
+    width: 400px;
+}
+.right-userlogin-input-text .input-password{
+    float: left;
+    width: 230px;
+    height: 38px;
+    outline: none;
+    margin-left: 5px;
+}
+.right-userlogin-input-text .password a{
+    color: cornflowerblue;
+    text-decoration: none;
+}
+.right-userlogin-input-text .password{
+    float: right;
+    display: block;
+    margin-right: 35px;
+    margin-top: 10px;
+}
+.right-userlogin-button button{
+    width: 187.5px;
+    height: 40px;
+    margin-top: 15px;
+    background: white;
+    border: 1px solid silver;
+    border-radius: 10px;
+}
+.right-userlogin-button button p{
+    color: white;
+}
+.right-userlogin-button .right-userlogin-input-login{
+    background: rgb(153, 212, 252);
+    margin-left: 20px;
+    margin-bottom: 20px;
+    border: 0px;
+}
+.bottom-userlogin ul li{
+    list-style: none;
+    float: left;
+    margin-top: 15px;
+}
+.bottom-userlogin ul li img{
+    float: left;
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+}
+.right-userlogin-button .qita{
+    color: rgb(128, 128, 128);
+}
+.bottom-userlogin ul li a{
+    margin-left: 10px;
+    color: rgb(128, 128, 128);
+}
+.bottom-text{
+    float: right;
+    width: 360px;
+    font-size: 14px;
+    margin: 30px 230px;
+    text-align: center;
+    color: rgb(128, 128, 128);
+}
+.bottom-text a{
+    color: cornflowerblue;
+}
+.bottom-userlogin-weixin{
+    margin-left: 25px;
+}

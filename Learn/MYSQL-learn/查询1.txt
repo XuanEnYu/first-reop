@@ -1,0 +1,34 @@
+-- 最简单的查询：select 
+
+-- 1查询部分行信息：
+ -- 查询部门编号为20的员工信息
+ 
+ select * from emp where deptno=20;
+ 
+ -- 2查询部分列的信息
+ -- 查询员工编号，员工姓名和员工部门编号
+ 
+    select empno,ename,deptno from emp;
+ -- 3查询显示列名用中文标示
+   
+	 select empno 员工编号,ename "姓  名",mgr 上级编号 from emp;
+	 
+ -- 4 在查询中加入运算
+ -- 查询员工编号，姓名，工资，补助和工资总额
+ 
+    select empno,ename,sal,sal+1000 涨薪后 from emp;
+-- 5：去重操作
+-- 查询工作岗位信息
+-- 6:排序 order by + 排序字段
+-- 查询员工信息，并对工资升序(asc)排序,部门编号降序（desc）
+
+ select * from emp order by sal asc,deptno desc;
+   
+ 作业：
+ 
+    1：查询员工姓名，员工工资员工部门编号
+		
+    2：查询员工姓名，员工工资员工部门编号，每位员工降薪300
+		
+    3：查询员工信息，按入职日期升序排列
+

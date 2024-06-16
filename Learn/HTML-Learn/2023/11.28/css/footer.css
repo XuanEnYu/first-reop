@@ -1,0 +1,42 @@
+.footer{
+    width: 1200px;
+    height: 300px;
+    margin: auto;
+    margin-top: 60px;
+    background-color: white;
+    padding: 30px 30px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    box-shadow: 4px 4px 4px silver;
+}
+.footer button{
+    margin-top: 20px;
+    width: 160px;
+    height: 50px;
+    border: 0px;
+    border-radius: 6px;
+    box-shadow: 4px 4px 4px silver;
+}
+.footer button:hover{
+    background: aquamarine;
+}
+.footer p{
+    color: silver;
+    font-size: 14px;
+    margin: 30px 0px;
+}
+.leftFooter{
+    float: left;
+}
+.rightFooter{
+    float: right;
+}
+.rightFooter dl{
+    float: left;
+    margin-left:45px;
+    color: silver;
+    font-size: 14px;
+}
+.rightFooter-text{
+    color: black;
+}

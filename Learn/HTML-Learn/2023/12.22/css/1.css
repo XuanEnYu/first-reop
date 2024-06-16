@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.hua{
+    margin-left: 8px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+.box{
+    width: 260px;
+    height: 400px;
+    padding: 10px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.6);
+    border: 1px solid silver;
+    border-radius: 10px;
+}
+p{
+    color: silver;
+    float: left;
+}
+.jiage{
+    font-size: 26px;
+    color: red;
+}
+.xinping{
+    color: red;
+}
+.wuqian{
+    margin: 6px 0;
+    color: cornflowerblue;
+}
+.pinglun{
+    color: silver;
+    margin: 6px 0;
+    width: 150px;
+}
+.box .text img{
+    width: 25px;
+    height: 25px;
+}

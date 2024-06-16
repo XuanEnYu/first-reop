@@ -1,0 +1,33 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+span{
+    float: left;
+}
+.box{
+    width: 180px;
+    height: 30px;
+    border: 1px solid red;
+    margin:50px auto;
+}
+.boxleft{
+    background-color: red;
+    width: 70px;
+    height: 29px;
+    float: left;
+    padding: 2px;
+}
+.boxmiddle{
+    width: 0;
+    height: 0;
+    border: 20px solid transparent;
+    border-left:10px solid red ;
+    border-top:29px solid red ;
+    border-bottom:0px solid red ;
+    float: left;
+}
+.boxright{
+    padding: 4px;
+}

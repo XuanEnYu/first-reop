@@ -1,0 +1,10 @@
+.fotter{
+    width: 100%;
+    height: 80px;
+    background: url(../images/footer_bg.png)repeat;
+    margin-top: 80px;
+    padding-top: 30px;
+}
+.fotter>h4{
+    text-align: center;
+}

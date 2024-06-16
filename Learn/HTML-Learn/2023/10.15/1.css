@@ -1,0 +1,17 @@
+.text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ID {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    background: no-repeat;
+    background-image: url(./屏幕截图\ 2023-10-16\ 004918.png);
+    background-size: cover;
+}

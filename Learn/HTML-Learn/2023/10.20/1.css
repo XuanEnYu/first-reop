@@ -1,0 +1,31 @@
+body {
+    background: no-repeat;
+    background-image: url(../资源/123.jpg);
+    background-size: cover;
+}
+.box{
+    border: 1px solid blanchedalmond;
+    width: 400px;
+    margin: auto;
+    border-radius: 5px;
+    background-color: honeydew;
+    position: fixed;left: 800px;top: 250px;
+}
+p{
+  text-align: center;  
+}
+.submitbutt{
+    height: 24px;
+    width: 175px;
+    background-color: aquamarine;
+    border: 4px;
+}
+h2{
+    text-align: center;
+    color: aquamarine;
+}
+input{
+    width: 180px;
+    height: 20px;
+    border-radius: 5px;
+}

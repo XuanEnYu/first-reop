@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .box {
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            width: 250px;
+            height: 400px;
+        }
+
+        .box input {
+            height: 40px;
+            padding: 10px;
+            margin-top: 5px;
+        }
+        .box1{
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <h1>register</h1>
+        <form action="demo.php" method="post">
+            name<input type="text" name="name">
+            password<input type="password" name="password">
+            email<input type="text" name="email">
+            age<input type="text" name="age">
+            <input type="submit" value="注册">
+        </form>
+    </div>
+    <div class="box1">
+        <h1>查询</h1>
+        <from action="demo1.php" method="post">
+            <select name="age">
+                <option value="16">16岁</option>
+                <option value="17">17岁</option>
+                <option value="18">18岁</option>
+                <option value="20">20岁</option>
+                <option value="30">30岁</option>
+                <option value="68">68岁</option>
+            </select>
+            <input type="submit" value="查询">
+        </from>
+    </div>
+</body>
+
+</html>

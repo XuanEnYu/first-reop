@@ -1,0 +1,74 @@
+create  table stu4(
+  sno int(8),
+	sname varchar(10),
+	sex char(1),
+	age int(3),
+	classname varchar(15),
+	enterday date,
+	email varchar(15)
+);
+
+select * from stu4; -- 查看表数据
+desc stu4;-- 查看表结构
+	bbbbbb
+
+
+create  table stu4(
+  sno int(8) PRIMARY key auto_increment,
+	sname varchar(10) not NULL,
+	sex char(1) default "男",
+	age int(3),
+	enterday date,
+	classname varchar(15),
+	email varchar(15)
+);
+ 
+desc stu4;
+INSERT into stu4 VALUES(7,"梁国标","男",16,"4班223","2024-03-28","123@qq.com");
+
+
+--   1: 学号为主键；
+	-- 2：如果学号是整型，添加自增约束
+	-- 3：姓名不能为空
+	-- 4：邮箱唯一
+	-- 5：性别只能是男或者女
+	-- 6：年龄16到20岁
+	-- 7：性别默认为男
+  -- 添加方式：列级添加，即直接在字段后面添加约束条件
+   
+ create table stu5(
+		
+       sno int(10),
+       sname varchar(5) ,
+		
+       sex char(1),
+		
+       age int(3) ,
+		
+       enterday date,
+		 
+       classname varchar(15),
+		
+       email varchar(15) 
+		
+);
+  -- 修改表定义方式添加非外键约束条件
+	 注意事项：1：默认约束，非空约束是不能通过修改表定义来添加
+	           2：自增约束也不可以通过修改表定义添加，只能通过modify 命令修改，前提是要有主键，并且主键是整型数据
+	 
+   alter table stu5 add constraint pk_stu5_sno primary key(sno);
+	 
+   alter table stu5 add constraint ck_stu5_age check(sex = "男" ||sex = "女")
+	
+	作业：（参考上面添加方法）
+	 
+	  1：在本表中通过修改表定义方式为性别字段添加检查约束：性别只能是男或者女
+		2：在本表中通过修改表定义方式为邮箱添加唯一约束
+
+
+
+		 desc stu5;
+		 
+		alter table stu5 add constraint stu5_sex check(sex = "男" ||sex = "女");
+		
+		alter table stu5 add constraint stu5_email unique key(email);

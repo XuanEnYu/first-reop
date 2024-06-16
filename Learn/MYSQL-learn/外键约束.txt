@@ -1,0 +1,70 @@
+-- 先建主表：班级表
+
+ create table t_class(
+    cno int (4) primary key,
+		classname varchar(15),
+		croom varchar (15)
+		);
+		select *from t_class;
+		delete  from t_class;
+		insert into t_class values(1,'java01','r4505');
+		insert into t_class values(2,'java02','r4405');
+		insert into t_class values(3,'java03','r4605');
+		
+		-- 再建从表：学生表
+		drop table t_stu;
+		create table t_stu (
+		  sno int (5) primary key ,
+			 sname varchar(5),
+			 classno int (4),
+			 constraint fk_stu_classno foreign key(classno) references t_class(cno)
+			 );
+		insert into t_stu values(1,'张三',1),(2,'李四',2),(3,'王五',3);
+		select * from t_stu;
+		
+		-- 添加班级编号为4的学生信息
+		insert into t_stu values(4,'丽丽',4)
+		
+		-- 删除班级表中班级编号为2的班级信息（学生表中有班级编号为2的学生信息）
+		
+		delete from t_class where cno =2;
+		
+		delete from t_stu where classno =2;
+		
+		
+		
+		
+		
+		alter table t_stu add constraint fk_stu_classno foreign key(classno) references t_class(cno);
+		
+		-- 1：往学生表添加一个班级编号为1班的的学生
+		insert into t_stu values(null,'赵六',10)
+	        -- 2：删掉班级编号为7的班级
+	    delete from t_class where cno=7;
+		-- 添加外键约束：1：添加方式：表级添加:2：添加对象：从表，
+		-- 3：关键字：foreign key+(外键字段名称) references+（关联字段名称）
+		   drop table t_stu;-- 先删除从表
+			 -- 重建从表，并且添加外键约束
+			 create table t_stu (
+		    sno int (5) primary key auto_increment,
+			  sname varchar(5),
+		   classno int (4),
+		   constraint fk_stu_classno foreign key(classno) references t_class(cno)
+			 );
+			 select * from t_class;
+		 delete from t_class where cno=9;
+		 
+		
+		-- 通过修改表的定义方式添加外键，方法和非外键修改定义添加一样
+		
+		create table t_stu (
+		
+		   sno int (5) primary key auto_increment,
+			 sname varchar(5),
+			 classno int (4)
+			 );
+			 
+			 alter table t_stu add constraint fk_stu_classno foreign key(classno) references t_class(cno);
+			 
+			 
+			 

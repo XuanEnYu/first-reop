@@ -1,0 +1,53 @@
+.middle{
+    width: 100%;
+    height: 600px;
+}
+.body{
+    width: 980px;
+    height: 120px;
+    margin: auto;
+    margin-top: 20px;
+}
+.body>ul li{
+    margin: auto;
+    height: 120px;
+    width: 164px;
+    float: left;
+    list-style: none;
+    text-align: center;
+    padding-top: 30px;
+    border: 2px solid orange;
+    margin-left: -1px;
+    background-color: rgb(255, 243, 221);
+}
+table{
+    width: 980px;
+    height: 500px;
+    border: 1px solid silver;
+    border-collapse: collapse;
+    margin: auto;
+    margin-top: 20px;
+
+}
+table>tr,th,td{
+    text-align:  center;
+}
+.table-text{
+    width: 120px;
+    margin: auto;
+}
+.table-text2{
+    width: 60px;
+    margin: auto;
+}
+.table-button{
+    width: 120px;
+    height: 35px;
+    background: tomato;
+    color: white;
+    border: 0px;
+    font-size: 16px;
+}
+.table-button:hover{
+    background: rgb(255, 135, 113);
+}

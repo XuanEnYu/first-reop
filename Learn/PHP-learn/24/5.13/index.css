@@ -1,0 +1,30 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+h1{
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+p{
+    font-size: 14px;
+    color: red;
+    font-weight: bold;
+    text-align: center;
+}
+.box{
+    width: 500px;
+    height: 200px;
+    border-radius: 6px;
+    background: linear-gradient(to left,cornflowerblue,pink);
+    margin:100px auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    box-shadow: 0px 1px 10px silver;
+    flex-wrap: wrap;
+}

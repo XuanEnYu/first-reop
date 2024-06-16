@@ -1,0 +1,44 @@
+-- 1:二次筛选   having+条件表达式
+ select * from emp;
+
+-- 统计各个岗位的平均工资，除了MANAGER
+
+-- where 子句
+ 
+ select job,avg(sal) from emp where job != "MANAGER" group by job;
+ 
+ having 子句：
+ select job,avg(sal) from emp group by job having job != "MANAGER";
+ 
+ 2:子查询
+ 
+ -- 子查询：一条查询语句中嵌套了一条或者多条查询语句
+ -- 分类：单行和多行子查询，相关与不相关
+ 
+ -- 不相关子查询：
+ 
+ -- 查询所有比CLARK工资高的员工信息：
+ 1: select sal from emp where ename="CLARK";
+ 2: select * from emp where sal>2450;
+ 
+ -- 子查询(单行)：
+     
+ select * from emp where sal>(select sal from emp where ename="CLARK");
+ 
+ -- 子查询（多行）
+ -- 查询部门20中与部门10员工岗位一样的员工信息
+    1:select * from emp where denptno=20
+		2:select job from emp where deptno=10; (MANAGER.PRESIDENT,CLERK)
+		3:select job from emp where deptno=20;(CLERK,MANAGER,ANALYST)
+ 
+ select * from emp where deptno=20 and job = any(select job from emp where deptno=10)
+ 
+ 作业：
+     		 1：输入工资最小值小于2000的工作岗位
+		 2：查询职位和SCOTT相同，且比他入职时间早的员工信息
+		 3: 查询和CLARK同一部门而且比他工资低得员工信息
+		 4: 查询工资低于任意一个CLERK工资的员工信息
+
+ 
+ 
+ 

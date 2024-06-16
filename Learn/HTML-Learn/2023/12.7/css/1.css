@@ -1,0 +1,32 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.box{
+    width: 200px;
+    height: 200px;
+    background: orange;
+    /* display显示隐藏(不会占用原来的位置)/隐藏none、显示block */
+    /* display: none; */
+    /* display: block; */
+    /* visibility隐藏(会占用原来的位置)/隐藏hidden、显示visible*/
+    /* visibility: hidden; */
+    /* visibility: visible; */
+}
+.box2{
+    width: 200px;
+    height: 200px;
+    background: cornflowerblue;
+}
+.box3{
+    width: 200px;
+    height: 90px;
+    background: red;
+    /* overflow: hidden; */
+    /*overeflow scroll强制显示滚动条/auto自动显示 */
+    overflow: auto;
+}
+.l{
+    visibility: hidden;
+}

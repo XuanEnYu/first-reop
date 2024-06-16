@@ -1,0 +1,71 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #e6e6e6;
+}
+.vip{
+    width: 400px;
+    height: 170px;
+    background: white;
+    border-radius: 6px;
+    padding: 20px;
+    padding-right: 0px;
+    position: relative;
+    position: fixed;
+    bottom:20px;
+    right:20px;
+}
+.vip button{
+    width: 130px;
+    height: 40px;
+    border-radius: 6px;
+    border: 0px;
+    background: rgb(250, 168, 232);
+    color: white;
+    margin-top: 12px;
+    transition: 0.2s;
+}
+.vip button:hover{
+    background: rgba(248, 175, 232, 0.808);
+}
+.leftvip{
+    float: left;
+}
+.leftvip .end{
+    font-size: 14px;
+    color: rgb(131, 131, 131);
+}
+.leftvip span{
+    color:pink;
+}
+.leftvip .title{
+    font-weight: 800;
+    margin: 10px 0px 10px;
+}
+.leftvip .text{
+    color: silver;
+    font-size: 15px;
+}
+.rightvip{
+    background: url(../img/vip.png) no-repeat center;
+    background-size: cover;
+    width: 135px;
+    height: 150px;
+    float: right;
+}
+.close{
+    position: absolute;
+    top: 6px;
+    right: 10px;
+}
+.close a{
+    text-decoration: none;
+    color: silver;
+}
+.close a:hover{
+    color: black;
+    cursor: pointer;
+}

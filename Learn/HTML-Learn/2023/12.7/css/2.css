@@ -1,0 +1,38 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.box{
+    width: 680px;
+    height: 500px;
+    margin: auto;
+    margin-top: 50px;
+}
+.box2{
+    position: relative;
+    width: 680px;
+    height: 400px;
+    background: url(../img/1.jpg) no-repeat center;
+    background-size: cover;
+    margin: auto;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+.make{
+    display: none;
+    border-radius: 6px;
+    width: 680px;
+    height: 400px;
+    background: url(../img/arr.png)no-repeat center rgba(0, 0, 0, .4);
+}
+.box2:hover .make{
+    display: block;
+}
+.box span{
+    font-size: 30px;
+}
+.box .text{
+    font-size: 14px;
+    color: silver;
+}

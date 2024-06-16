@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: url(../img/1.PNG);
+    background-size: cover;
+}
+.box{
+    width: 1200px;
+    height: 500px;
+    background: white;
+    margin: auto;
+    border-radius: 10px;
+    margin-top: 200px;
+    box-shadow:10px 10px 10px silver;
+    padding: 10px;
+}
+.xuesheng{
+    width: 1000px;
+    height: 200px;
+    margin: auto;
+}
+.xuesheng h1{
+    text-align: center;
+}
+table{
+    border: 1px solid black;
+    width: 1000px;
+    height: 200px;
+    border-spacing: 0px;
+    margin-top: 40px;
+}
+tr td{
+    border: 1px solid black;
+    text-align:center;
+}
+th{
+    border: 1px solid black;
+    background: cornflowerblue;
+    color: white;
+}
+.xinxi{
+    width: 620px;
+    height: 140px;
+    margin: auto;
+}
+.xinxi h1{
+    text-align: center;
+}
+.xinxi .biao{
+    float: left;
+    margin: 20px 20px;
+}
+.xinxi .biao .xinming{
+    width: 70px;
+}
+.xinxi .biao .nianling{
+    width: 40px;
+}
+.xinxi .biao form{
+    display: inline;
+}
+.xinxi .biao .xinzhi{
+    width: 80px;
+}
+.xinxi .biao button{
+    border: 0px;
+    background: cornflowerblue;
+    border-radius: 6px;
+    width: 60px;
+    height: 30px;
+    color: white;
+}
+.xinxi .biao button:hover{
+    background: white;
+    border: 1px solid silver;
+    color: black;
+}

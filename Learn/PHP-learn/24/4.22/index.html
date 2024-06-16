@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>添加信息</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .box{
+            width: 250px;
+            height: 200px;
+            margin:100px auto;
+            background: #f4f4f4;
+            border-radius: 10px;
+            padding:10px 15px;
+            box-shadow: 5px 5px 10px silver;
+        }
+        .box h3{
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        form{
+            height: 150px;
+        }
+        form #buttom{
+            display: block;
+            width: 120px;
+            height: 30px;
+            margin: auto;
+            border: none;
+            border-radius: 6px;
+            box-shadow: 1px 1px 5px silver;
+            transition: 0.3s;
+            margin-top: 5px;
+        }
+        form #buttom:hover{
+            background: orange;
+            color: white;
+        }
+        form #text{
+            margin-bottom: 10px;
+            border: none;
+            height: 25px;
+            outline: none;
+            border-radius: 4px;
+            box-shadow: 1px 1px 5px silver;
+            padding: 0px 3px;
+        }
+        form p{
+            font-weight: 500;
+            float: left;
+            font-size: 15px;
+            margin-right: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <h3>添加员工信息</h3>
+        <form action="18.8.php" method="POST">
+            <p>员工姓名:</p>
+            <input type="text" name="sname" size="15" id="text"><br/>
+            <p>员工年龄:</p>
+            <input type="text" name="sage" size="15" id="text"><br/>
+            <p>员工工资:</p>
+            <input type="text" name="sgz" size="15" id="text"><br/>
+            <input type="submit" value="上传数据" id="buttom">
+        </form>
+    </div>
+</body>
+
+</html>

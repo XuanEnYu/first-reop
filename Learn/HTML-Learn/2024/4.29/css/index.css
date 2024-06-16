@@ -1,0 +1,76 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+}
+.body{
+    max-width: 700px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+header{
+    height: 45px;
+    background: #f4f4f4;
+    width: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 2px 10px silver;
+    border-radius: 6px;
+}
+.nav-left input{
+    width: 600px;
+    height: 30px;
+}
+.nav-right{
+    width: 40px;
+    height: 30px;
+}
+.middle{
+    display: flex;
+    flex-wrap: wrap;
+}
+.banner{
+    width: 700px;
+    height: 200px;
+    margin-top: 5px;
+    border-radius: 6px;
+    background: linear-gradient(to right, rgb(56, 56, 255), pink);
+}
+.middle-top{
+    display: flex;
+    background: #f4f4f4;
+    box-shadow: 0px 2px 10px silver;
+    width: 700px;
+    height: 80px;
+    margin-top: 5px;
+    justify-content: space-around;
+}
+.middle-topson{
+    width: 64px;
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(../img/localnav_bg.png)no-repeat center;
+}
+.middle-topson:nth-child(1){
+    background-position: 0 0;
+}
+.middle-topson:nth-child(2){
+    background-position:128px 0x;
+}
+.middle-topson:nth-child(3){
+    background-position:192px 0x;
+}
+.middle-topson:nth-child(4){
+    background-position:256px 0x;
+}
+.middle-topson:nth-child(5){
+    background-position:320px 0x;
+}

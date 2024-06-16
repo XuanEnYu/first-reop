@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f6f6f6;
+        }
+
+        .bigbox {
+            margin: 100px auto;
+            width: 700px;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            background: linear-gradient(to right, rgb(56, 56, 255), pink);
+            border-radius: 10px;
+            box-shadow: 4px 4px 10px silver;
+            flex-wrap: wrap;
+        }
+
+        .box {
+            display: flex;
+            width: 600px;
+            padding: 20px;
+            margin: auto;
+            border-radius: 10px;
+            background: white;
+
+        }
+
+        .box .list1 {
+            flex: 1;
+            border-right: 2px solid silver;
+            margin-right: 20px;
+        }
+
+        .list2 {
+            display: flex;
+            flex: 2;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .buttombox{
+            padding: 20px;
+            background: white;
+            display: flex;
+            width: 500px;
+            border-radius: 10px;
+            height: 82px;
+            justify-content: center;
+            align-items: center;
+        }
+        .buttomlist1{
+            flex: 1;
+            border-right: 2px solid silver;
+            margin-right: 10px;
+        }
+        .buttomlist2{
+            flex: 1;
+            margin-right: 10px;
+            border-right: 2px solid silver;
+        }
+        .buttomlist3{
+            flex: 2;
+        }
+        .bigbox button{
+            height: 82px;
+            width: 90px;
+            margin-left: 10px;
+            border-radius: 10px;
+            background: linear-gradient(to right, rgb(104, 104, 255), rgb(51, 51, 255));
+            border: none;
+            color: white;
+        }
+        .bigbox button:hover{
+            background: rgb(219, 153, 31);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bigbox">
+        <div class="box">
+            <div class="list1">
+                <p>Lorem ipsum dolor</p>
+                <p>abc</p>
+            </div>
+            <div class="list2">
+                <div class="leftlist2">
+
+                    <p>Lorem, ipsum</p>
+                    <p>Lorem.</p>
+                </div>
+                <div class="time">
+                    -一晚-
+                </div>
+                <div class="rightlist2">
+
+                    <p>Lorem, ipsum</p>
+                    <p>Lorem</p>
+                </div>
+            </div>
+        </div>
+        <div class="buttombox">
+            <div class="buttomlist1">
+                <p>Lorem, ipsum</p>
+                <p>Lorem</p>
+            </div>
+            <div class="buttomlist2">
+                <p>Lorem, ipsum</p>
+                <p>Lorem</p>
+            </div>
+            <div class="buttomlist3">
+                <p>Lorem, ipsum</p>
+                <input type="text">
+            </div>
+        </div>
+        <button>搜索</button>
+    </div>
+</body>
+
+</html>
