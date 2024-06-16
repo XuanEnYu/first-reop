@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>导航栏变固定导航栏</title>
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: auto;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+            text-decoration: none;
+        }
+
+        body {
+            height: 200vh;
+            background: linear-gradient(to left, rgb(255, 179, 192), rgb(134, 134, 255));
+        }
+
+        header {
+            transition: all 0.5s ease;
+            color: white;
+            padding: 20px 10px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 2em;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 65%;
+        }
+
+        .nav a {
+            color: white;
+            padding: 0 15px;
+            font-size: 1.2em;
+        }
+
+        .nav a:hover {
+            color: rgb(87, 73, 73);
+        }
+        .sticky{
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, .3);
+            z-index: 999;
+            animation: sticky .4s ease;
+        }
+        @keyframes sticky {
+            0%{
+                transform: translateY(-100%);
+            }
+            100%{
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header id="navbar-container">
+        <div class="nav">
+            <div class="logo">
+                <i class="fa-solid fa-mug-saucer fa-beat "></i>
+            </div>
+            <ul>
+                <a href="#">首页</a>
+                <a href="#">产品</a>
+                <a href="#">服务</a>
+                <a href="#">关于我们</a>
+                <a href="#">联系我们</a>
+            </ul>
+        </div>
+    </header>
+    <script>
+        window.onscroll = function() {
+            var navbar = document.getElementById("navbar-container");
+            if (window.pageYOffset >= 100) {
+                navbar.classList.add("sticky");
+            } if (window.pageYOffset < 1) {
+                document.getElementById("navbar-container").style.color = "none";
+                setTimeout(function() {navbar.classList.remove("sticky");}, 100);
+            }
+        }
+    </script>
+</body>
+
+</html>
