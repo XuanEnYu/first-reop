@@ -9,7 +9,7 @@
         if(!$row){
             echo"<script>alert('账户或密码错误，请重新登录');location='demo.html'</script>";
         }else{
-            echo"<script>alert('登陆成功，欢迎回来');location='demo.html'</script>";
+            echo"<script>alert('登陆成功，欢迎回来');location='Guestbook.html'</script>";
         }
     }
 ?>
