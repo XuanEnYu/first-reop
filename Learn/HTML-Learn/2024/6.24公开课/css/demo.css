@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.live {
+    width: 1100px;
+    margin: 30px auto;
+
+}
+
+.liveTop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid cornflowerblue;
+}
+
+.liveTop a {
+    display: flex;
+    align-items: end;
+    color: cornflowerblue;
+}
+
+.liveTop a span {
+    font-size: 32px;
+    margin: 0 10px;
+}
+
+.liveTop .liveText p {
+    margin: 0 5px;
+}
+.liveMain{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0 ;
+}
+.liveMiddle,
+.liveLeft,
+.liveRight{
+    display: flex;
+    justify-content: space-between;
+    /* height: 254px; */
+}
+.liveLeft img{
+    width: 373px;
+    height: 254px;
+}
+.liveLeft{
+    flex-direction: column;
+    height: 295px;
+}
+.liveLeft div{
+    background: rgba(0, 0, 0, .3);
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.liveLeft a{
+    color: #fff;
+}
+.liveMiddle img{
+    width: 210px;
+    height: 137.5px;
+    display: inline-flex;
+}
+.liveMiddle{
+    flex-direction: row;
+    align-items: center;
+    height: 295px;
+}
+.middleList{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+.middleList div{
+    position: absolute;
+    background: rgba(0, 0, 0, .3);
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+.middleList a{
+    font-size: 12px;
+    color: #fff;
+}
+.liveRight img{
+    width: 216px;
+    height: 146px;
+}
+.livebottom,
+.livetop{
+    height: 100%; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+.livebottom{
+    margin-left: 15px;
+}
+.liveRight{
+    background: green;
+    padding: 20px;
+}
+.liveRight p{
+    color: #fff;
+    display: flex;
+    font-size: 14px;
+}
+.liveRight span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    margin-right: 5px;
+}

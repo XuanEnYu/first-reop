@@ -26,9 +26,6 @@
             font-size: 18px;
             cursor: pointer;
             transition: all.3s ease;
-            margin-top: 10px;
-        }
-        .btn:nth-child(1){
             margin-top: 20px;
         }
         .btn:hover{
@@ -65,6 +62,10 @@
             margin: 10px;
             box-shadow: 5px 8px 10px rgba(192, 192, 192, 0.397);
         }
+        a{
+            display:block;
+            text-align:center;
+        }
     </style>
 </head>
 
@@ -73,26 +74,25 @@
         <h1>ALL Guest</h1>
         <?php
     require "conn.php";
-    $sql = "SELECT name,message FROM guestbook WHERE 1";
+    $sql = "select * from Guestbook";
     $result = mysqli_query($conn,$sql);
     echo "<table bgcolor='#f5f8fd' align='conter' width = '380'>";
         echo "<tr height = '50'>";
             echo "<td width = '50' align = 'center'>昵称</td>";
             echo "<td width = '50' align = 'center'>内容</td>";
+            echo "<td width = '50' align = 'center'>删除</td>";
         echo "</tr>";
-    while($row = mysqli_fetch_row($result)){
+    while($arr = mysqli_fetch_array($result)){
         echo "<tr height = '50'>";
-            echo "<td width = '50' align = 'center'>".$row[0]."</td>";
-            echo "<td width = '50' align = 'center'>".$row[1]."</td>";
+            echo "<td width = '50' align = 'center'>".$arr[0]."</td>";
+            echo "<td width = '50' align = 'center'>".$arr[1]."</td>";
+            echo "<td><a onclick=\"return confirm('确定删除么')\" href='delete.php?code={$arr[0]}'>删除</a></td>";
         echo "</tr>";
     }
     echo "</table>";
 ?>
-        <form action="Guestbook.html" method="post">
+        <form action="ly.php" method="post">
             <input type="submit" value="返回" class="btn">
-        </form>
-        <form action="del.php" method="post">
-            <input type="submit" value="删除" class="btn">
         </form>
     </div>
 </body>
