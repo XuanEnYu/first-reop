@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            background-color: cyan;
+        }
+        /* span{
+            position: relative;
+            /* bottom:20px; */
+        } */
+        /* p{
+            text-align: center;
+        } */
+    </style>
+</head>
+<body>
+    <table border="1" width="300">
+        <tr>
+            <th>留言板</th>
+        </tr>
+        <tr>
+            <td>
+                <form action="ly.php" method="POST">
+                   <p> 昵称：<input type="text" name="username"></p>
+                   <p> 留言：<textarea  cols="30" rows="10" name="comment"></textarea></p>
+                   <p> <input type="submit" value="提交"></p>
+                </form>
+            </td>
+           </tr>
+           <tr>
+            <td>
+                <form action="chakan.php" method="POST">
+                    <input type="submit" value="查看留言">
+                </form>
+            </td>
+           </tr>
+           <tr>
+            <td>
+                <form action="zhuxiao.php" method="POST">
+                    <input type="submit" value="注销">
+                </form>
+            </td>
+           </tr>
+    </table>
+
+     </div>
+</body>
+</html>

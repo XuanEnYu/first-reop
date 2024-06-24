@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 300px;
+            height: 200px;
+            margin:100px auto;
+            background-color:cyan;
+        }
+        h2{
+            text-align: center;
+            padding:10px 0;
+        }
+        form{
+            text-align: center;
+        }
+        .content{
+           position: relative;
+        }
+        .f1{
+            position: absolute;
+            left:180px;
+            top:78px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>登录</h2>
+        <div class="content">
+            <form action="dl.php" method="POST">
+                <p>用户名：<input type="text" name="username"></p>
+                <p>密&nbsp;&nbsp;&nbsp;码：<input type="text" name="password"></p>
+                <input type="submit" name="" value="登录">
+             </form>
+             <form action="zhuce1.html" method="POST" class="f1">
+                 <input type="submit" name="" value="注册">
+             </form>
+        </div>
+    </div>
+</body>
+</html>
