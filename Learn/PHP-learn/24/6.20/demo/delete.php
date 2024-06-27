@@ -1,7 +1,7 @@
 <?php
 require 'conn.php';
 $code = $_GET["code"];
-$sql = "delete from guestbook where id ='{$code}'";
+$sql = "delete from guestbook where name ='{$code}'";
 $r = mysqli_query($conn, $sql );
 
 if(! $r )
