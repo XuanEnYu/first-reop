@@ -1,0 +1,225 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+header{
+    width: 100%;
+    height: 160px;
+    background: url(../image/1.jpg)no-repeat center center/cover;
+}
+i{
+    margin-right: 5px;
+}
+.navbar a{
+    font-size: 14px;
+    color: #fff;
+}
+.navbar{
+    height: 64px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+#left-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+}
+#left-nav li:hover #left-nav li a{
+    animation: liams .3s ease-in-out;
+}
+#middle-nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+.Search{
+    flex: 0.6;
+    margin: 0 15px;
+}
+.Search form{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 0.5rem;
+    width: 100%;
+}
+.Search form input{
+    width: 100%;
+}
+.Search form input,
+.Search form button{
+    border: none;
+    border-radius: 0.5rem;
+    padding:10px 5px;
+    outline: none;
+}
+.Search form button{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+    transition: all.2s ease;
+}
+.Search form button i{
+    font-size: 16px;
+    margin-left: 5px;
+}
+.Search form button:hover{
+    background: rgba(255, 255, 255, 0.95);
+}
+#right-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 0.9;
+}
+#right-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#right-nav .user{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: rgb(85, 144, 255);
+}
+#right-nav li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#right-nav li i{
+    color: #fff;
+    cursor: pointer;
+}
+#right-nav li:hover i{
+    animation: liams .3s ease-in-out;
+}
+@keyframes liams {
+    0%{
+        transform:  translateY(0%);
+    }
+    25%{
+        transform:  translateY(-18%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+#right-nav button{
+    background: rgb(255, 122, 166);
+    width: 100px;
+    height: 35px;
+    border: none;
+    outline: none;
+    border-radius: 0.5rem;
+    transition: all.3s ease;
+    color: #fff;
+}
+#right-nav button:hover{
+    background: pink;
+}
+#header-channle{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    margin: auto;
+    padding: 20px;
+}
+.left-channle{
+    display: flex;
+    width: 15%;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 10px;
+}
+.left-channle .item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.middle-channle{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0px 20px;
+}
+.middle-channle .top,
+.middle-channle .bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.middle-channle .top a,
+.middle-channle .bottom a{
+    width: 70px;
+    height: 28px;
+    background: #f6f6f6;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+}
+.right-channle{
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 1px solid #ccc;
+    flex-direction: column;
+}
+.right-channle .top,
+.right-channle .bottom{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+#element{
+    display: flex;
+    width: 95%; 
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+    height: 450px;
+}
+#banner{
+    width: 38%;
+    height: 100%;
+    background: url(../image/banner1.jpg)no-repeat center center/cover;
+}
+.content{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    height: 100%;
+    flex-wrap: wrap;
+}
+.content .item{
+    width: 248px;
+    height: 212.5px;
+    background: url(../image/banner.PNG)no-repeat center center/cover;
+}
